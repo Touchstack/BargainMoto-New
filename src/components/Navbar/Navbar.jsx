@@ -3,7 +3,7 @@ import AppLogo from "../../assets/images/bargain-auto-logo.svg";
 
 const Navbar = () => {
     return (
-     <nav className="flex px-2 font-Regular lg:pt-2 md:pt-8 sm:px-4 py-2.5 rounded bg-[#8C394C]">
+     <nav className="flex px-2 font-Regular lg:pt-2 md:pt-8 sm:px-4 py-2.5 bg-[#8C394C]">
        <div className="container flex flex-wrap justify-between items-center mx-auto">  
            <a
           href="/"
@@ -49,7 +49,7 @@ const Navbar = () => {
        {/* Log In Button */}
        <ul className='flex items-center py-2 font-SemiBold'> 
       <p className='p-2'> <li className="text-[#FFF] pr-5">Log In</li> </p>
-      <p className='bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg'><li>Sign Up</li></p>
+      <button className='bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg'><li>Sign Up</li></button>
       </ul>
       </div>
       </nav> 
