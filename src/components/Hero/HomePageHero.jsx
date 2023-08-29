@@ -11,7 +11,7 @@ const HomePageHero = () => {
           {" "} </span>
           <span className="lg:text-3xl md:text-3xl sm:text-2xl text-xl font-MontserratThin text-[#FFF]"></span>
           </header>
-          <p className="max-w-[980px] m-auto md:pl-25 p-4 py-2 mt-5 font-Regular text-[#EFEFEF] text-lg pt-2 lg:px-60 md:px-40 sm:px-8]"> 
+          <p className="max-w-[980px] m-auto md:pl-25 p-4 py-2 mt-5 font-Regular text-[#EFEFEF] text-lg pt-2 lg:px-60 md:px-40 sm:px-28"> 
            Seamless car exchanges made simple - find your ride or find your buyer today. 
           </p>
         </div>
