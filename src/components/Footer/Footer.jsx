@@ -9,8 +9,8 @@ export default function Footer() {
   };
 
   return ( 
-    <div className="bg-appYellowLight pt-14 px-4">
-    <div className="container mx-auto"> 
+    <div className="bg-appYellowLight">
+    <div className="container flex max-w-7xl"> 
     <footer className="grid-cols-2 p-4 sm:p-6 bg-[#0C0B0B] font-Regular"> 
               <div className="md:flex md:justify-center p-14">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"> 
