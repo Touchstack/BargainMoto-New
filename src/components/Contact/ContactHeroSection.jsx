@@ -11,5 +11,4 @@ const ContactHeroSection = () => {
       </div>
    )
 }
-
 export default ContactHeroSection
