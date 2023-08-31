@@ -4,7 +4,6 @@ import Hyundai from "../../assets/images/Hyundai-Logo.svg";
 import MercedezBenz from "../../assets/images/Mercedes-Logo.svg";
 import Toyota from "../../assets/images/Toyota-Logo.svg";
 import BMW from "../../assets/images/BMW-Logo.svg";
-
 const HomeFavoriteBrands = () => {
   return (
        <div className="container mx-auto text-[#191919] text-center lg:py-24 md:py-24 sm:py-16 py-24 md:px-4 px-11
