@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Team1 from "../../assets/images/Team-1.svg";
 import Team2 from "../../assets/images/Team-2.svg";
 import Team3 from "../../assets/images/Team-3.svg";
+
 const AboutMeetTheTeam = () => {
   return (
        <div className="container mx-auto">
