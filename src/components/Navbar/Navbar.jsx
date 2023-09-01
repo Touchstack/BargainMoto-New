@@ -26,7 +26,7 @@ const Navbar = () => {
               Sell a Car
             </a>
           </li>
-          <li className="/">
+          <li className="list-none inline-block px-5 text-[#FBFBFB]">
             <a href="/" className="">
               Buy a Car
             </a>
