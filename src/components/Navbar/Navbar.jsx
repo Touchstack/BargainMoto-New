@@ -70,18 +70,18 @@ const Navbar = () => {
           id="navbar-cta"
         >
           <ul className="flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg  md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-            <li className="font-SemiBold list-none inline-block px-5 text-[#D5FFFF] hover:scale-105 duration-200 lg:ml-40 md:ml-0 sm:ml-0 ml-0">
+            <li className="list-none inline-block px-5 text-[#D5FFFF] hover:scale-105 duration-200 hover:font-SemiBold lg:ml-40 md:ml-0 sm:ml-0 ml-0">
               <a href="/" className="">
                 Home
               </a>
             </li>
-            <li className="list-none inline-block px-5 text-[#FBFBFB]">
-              <a href="/" className="">
+            <li className="list-none inline-block px-5 text-[#FBFBFB] hover:scale-105 duration-200 hover:font-SemiBold">
+              <a href="/sellacar" className="">
                 Sell a Car
               </a>
             </li>
-            <li className="list-none inline-block px-5 text-[#FBFBFB]">
-              <a href="/" className="">
+            <li className="list-none inline-block px-5 text-[#FBFBFB] hover:scale-105 duration-200 hover:font-SemiBold">
+              <a href="/buyacar" className="">
                 Buy a Car
               </a>
             </li>
@@ -90,9 +90,12 @@ const Navbar = () => {
                 onClick={handleShowDropdown}
                 className="flex justify-center items-center mx-auto"
               >
-                Company
+                <span className="hover:scale-105 duration-200 hover:font-SemiBold">
+                  {" "}
+                  Company
+                </span>
                 <svg
-                  className="mr-1 h-5 w-5 text-white md:hover:text-fleetBlue"
+                  className="mr-1 h-5 w-5 text-white md:hover:text-fleetBlue hover:scale-105 duration-200 hover:font-SemiBold"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
