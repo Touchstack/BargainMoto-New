@@ -23,18 +23,7 @@ function HomePage() {
         />
       </div>
       <WhatSetBargainMotoApart />
-      {/*<AboutDescriptionSection />*/}
       <HomeFavoriteBrands />
-      {/*<ContactGetInTouch />*/}
-      {/*<HomeCustomerVoices />*/}
-      {/*<ContactMapView />*/}
-
-      {/*<AboutHeroSection />*/}
-      {/*<HowWeDoIt />*/}
-      {/*<ContactHeroSection />*/}
-      {/*<WhyWeDoIt />*/}
-      {/*<AboutMeetTheTeam />*/}
-      {/*<AboutCallToAction />*/}
       <HeroCallToAction />
       <Footer />
     </div>
