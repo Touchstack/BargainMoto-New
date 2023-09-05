@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import AppLogo from "../../assets/images/bargain-auto-logo.svg";
 import Navbar from "../Navbar/Navbar";
 
 const AboutHeroSection = () => {
   return (
-        <div className=" bg-[#8C394C] lg:pt-2 md:pt-8 sm:px-4 py-40">
-        <Navbar/>
-        <div className="m-12 font-Bold text-5xl max-w-[800px] p-9 text-[#FFFFFF]"> 
-        Get to know about us & meet our amazing team 
+    <main>
+      <Navbar />
+      <div className=" bg-[#8C394C] sm:px-4 lg:py-24 md:py-18 sm:py-16 py-12">
+        <div className="m-12 font-Bold lg:text-5xl md:text-4xl sm:text-3xl text-3xl max-w-[800px] p-9 text-[#FFFFFF]">
+          Get to know about us & meet our amazing team
         </div>
-        </div> 
-  )
-}
+      </div>
+    </main>
+  );
+};
 
-export default AboutHeroSection
+export default AboutHeroSection;
