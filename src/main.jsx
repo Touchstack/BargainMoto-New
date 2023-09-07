@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import HomePage from "./page/HomePage/HomePage.jsx";
-import ErrorPage from "./page/ErrorPage/ErrorPage.jsx";
-import AboutPage from "./page/AboutPage/AboutPage.jsx";
-import ContactUs from "./page/ContactUs/ContactUs.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
+import AboutPage from "./pages/AboutPage/AboutPage.jsx";
+import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 

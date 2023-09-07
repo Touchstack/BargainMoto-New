@@ -4,13 +4,13 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 const HeroCallToAction = () => {
   return (
     <div className="bg-[#8C394C] text-center py-20">
-      <p
+      <div
         className="font-Bold m-12 max-w-[9000px] text-[#FFFFFF]
         lg:text-4xl md:text-3xl sm:text-3xl text-3xl text-center py-4"
       >
         Ready for a new ride or quick sale?
         <p> Start your journey with BargainMoto today!</p>
-      </p>
+      </div>
       <div className="bg-[#8C394C] mx-auto px-8 lg:flex-row md:flex-row sm:flex-col flex-col justify-center items-center">
         <PrimaryButton
           buttonText={"Sell Your Car"}
