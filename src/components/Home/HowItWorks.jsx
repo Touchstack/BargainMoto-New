@@ -178,7 +178,7 @@ export const HowItWorks = () => {
                       className="my-12 flex"
                       variants={cardVariant}
                     >
-                      <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white">
                         {i + 1}
                       </span>
                       <div className="inline-flex justify-start items-center tracking-tighter font-Regular lg:text-xl md:text-lg sm:text-lg text-lg py-0">
@@ -209,7 +209,7 @@ export const HowItWorks = () => {
                       className="my-12 flex"
                       variants={cardVariant}
                     >
-                      <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white">
                         {i + 1}
                       </span>
                       <div className="inline-flex justify-start items-center tracking-tighter font-Regular lg:text-xl md:text-lg sm:text-lg text-lg py-0">
