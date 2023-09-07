@@ -109,7 +109,7 @@ export const HowItWorks = () => {
         className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 lg:py-8 py-4"
         id="services"
       >
-        <div className="py-12 px-8 lg:pt-24">
+        <div className="py-12 lg:pl-24 md:pl-16 sm:pl-12 pl-12 lg:pt-2">
           <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl py-4">
             How it works
           </h3>

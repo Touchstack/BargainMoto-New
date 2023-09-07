@@ -38,16 +38,7 @@ function HomePage() {
     <div>
       <Navbar />
       <HomePageHero />
-      <div className="bg-[#8C394C] mx-auto px-8 lg:flex-row md:flex-row sm:flex-col flex-col justify-center items-center text-center pb-12">
-        <PrimaryButton
-          buttonText={"Sell Your Car"}
-          className={"lg:mb-0 md:mb-0 sm:mb-0 mb-4"}
-        />
-        <OutlinedButton
-          buttonText={"Find your Dream Car"}
-          className={"lg:ml-5 md:ml-5 sm:ml-0 ml-4"}
-        />
-      </div>
+
       <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HowItWorks />
