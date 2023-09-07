@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import HomePageHero from "../../components/Hero/HomePageHero";
-import PrimaryButton from "../../components/Buttons/PrimaryButton";
-import OutlinedButton from "../../components/Buttons/OutlinedButton";
 import HomeFavoriteBrands from "../../components/Hero/HomeFavoriteBrands";
 import HomeTrustedBy from "../../components/Hero/HomeTrustedBy";
 import WhatSetBargainMotoApart from "../../components/Hero/WhatSetBargainMotoApart";
@@ -38,7 +36,6 @@ function HomePage() {
     <div>
       <Navbar />
       <HomePageHero />
-
       <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HowItWorks />
