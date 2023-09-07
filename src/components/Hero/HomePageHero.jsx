@@ -1,3 +1,5 @@
+import PrimaryButton from "../Buttons/PrimaryButton";
+import OutlinedButton from "../Buttons/OutlinedButton";
 const HomePageHero = () => {
   return (
     <div className="bg-[#8C394C] py-8 px-11 text-center">
@@ -11,6 +13,16 @@ const HomePageHero = () => {
         Seamless car exchanges made simple - find your ride or find your buyer
         today.
       </p>
+      <div className="mx-auto px-8 lg:flex-row md:flex-row sm:flex-col flex-col justify-center items-center text-center py-12">
+        <PrimaryButton
+          buttonText={"Sell Your Car"}
+          className={"lg:mb-0 md:mb-0 sm:mb-0 mb-4"}
+        />
+        <OutlinedButton
+          buttonText={"Find your Dream Car"}
+          className={"lg:ml-5 md:ml-5 sm:ml-0 ml-4"}
+        />
+      </div>
     </div>
   );
 };
