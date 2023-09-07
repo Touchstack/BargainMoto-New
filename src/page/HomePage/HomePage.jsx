@@ -3,6 +3,7 @@ import HomePageHero from "../../components/Hero/HomePageHero";
 import PrimaryButton from "../../components/Buttons/PrimaryButton";
 import OutlinedButton from "../../components/Buttons/OutlinedButton";
 import HomeFavoriteBrands from "../../components/Hero/HomeFavoriteBrands";
+import HomeTrustedBy from "../../components/Hero/HomeTrustedBy";
 import WhatSetBargainMotoApart from "../../components/Hero/WhatSetBargainMotoApart";
 import HeroCallToAction from "../../components/Hero/HeroCallToAction";
 import Footer from "../../components/Footer/Footer";
@@ -22,6 +23,7 @@ function HomePage() {
           className={"lg:ml-5 md:ml-5 sm:ml-0 ml-4"}
         />
       </div>
+      <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HomeFavoriteBrands />
       <HeroCallToAction />
