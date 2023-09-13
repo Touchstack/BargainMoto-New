@@ -16,8 +16,8 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-base font-MontserratSemiBold text-[#EC970F]">
-                Navigation
+              <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
+                For Seller
               </h2>
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
@@ -49,8 +49,8 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-base font-MontserratBold text-[#EC970F]">
-                Top brands
+              <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
+                For Buyer
               </h2>
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
@@ -70,30 +70,15 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/dealersguide" className="hover:underline">
-                    Honda
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="/contact" className="hover:underline">
-                    Hyundai
-                  </a>
-                </li>
-                <li className="mb-2">
                   <a href="/contact" className="hover:underline">
                     Mercedes
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="/contact" className="hover:underline">
-                    See More
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-base font-MontserratSemiBold text-[#EC970F]">
-                Learn More
+              <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
+                Company
               </h2>
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
@@ -114,7 +99,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-base font-MontserratSemiBold text-[#EC970F]">
+              <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
                 Get latest deals, promos, discounts & more
               </h2>
               <p className="text-[#FFFFFF] mb-2 p-4 py-0"> Email</p>
@@ -127,12 +112,19 @@ export default function Footer() {
                       placeholder="e.g derrik@hey.com"
                       name="subscriptionemail"
                       required
-                      className="block w-full p-4 text-[#666666] mb-4 font-MontserratRegular border border-[#DEDEDE] rounded-lg bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="block w-full p-4 text-[#666666] mb-4 font-Regular border border-[#DEDEDE] rounded-md bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     />
 
                     {/*Netlify Form Handling*/}
                     <input type="hidden" name="form-name" value="subscribe" />
                     {/*Netlify Form Handling*/}
+                    <button
+                      type="submit"
+                      className="font-SemiBold text-[#5C2E14] bg-[#F3B757]  hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-lg text-xl px-5 py-3 w-full
+                      text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      Subscribe Now
+                    </button>
                   </form>
                 </li>
               </ul>
