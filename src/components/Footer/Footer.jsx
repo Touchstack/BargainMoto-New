@@ -121,7 +121,7 @@ export default function Footer() {
                     <button
                       type="submit"
                       className="font-SemiBold text-[#5C2E14] bg-[#F3B757]  hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-lg text-xl px-5 py-3 w-full
-                      text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      text-center mr-3 md:mr-0 dark:bg-blue-600"
                     >
                       Subscribe Now
                     </button>
