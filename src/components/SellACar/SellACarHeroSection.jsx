@@ -9,7 +9,6 @@ const SellACarHeroSection = () => {
   return (
     <div>
       <Navbar />
-
       <div className="bg-[#8C394C]">
         <div className="py-18 px-2">
           <div className="container mx-auto">
@@ -19,12 +18,10 @@ const SellACarHeroSection = () => {
                 <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-[#FFF] text-4xl mt-6 break-normal md:break-all text-left">
                   Sell Your Car Fast to Serious Buyers!
                 </h3>
-
                 <p className="font-Regular lg:text-lg md:text-lg sm:text-base pt-4 break-normal md:break-all text-[#EFEFEF] text-xl mt-10">
                   Get the exposure you need to sell fast to the righ audience,
                   at the best price possible!
                 </p>
-
                 <div className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-9 break-normal md:break-all">
                   <PrimaryButton
                     buttonText={"Sell Your Car Now"}

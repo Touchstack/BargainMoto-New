@@ -10,7 +10,7 @@ const BuyACarHero = () => {
         <h3 className="font-Bold text-5xl text-[#FFF]">
           Your New Ride is just a <p className="m-2">Few clicks Away!</p>
         </h3>
-        <form className="flex justify-between items-center mt-12 p-1 text-[#A4A6A8] bg-[#FFFAF5]  max-w-[500px] mx-auto w-full border rounded-md">
+        <form className="flex justify-between items-center mt-12 p-1 text-[#A4A6A8] bg-[#FFF] max-w-[500px] mx-auto w-full border rounded-md">
           <div className="inline-flex">
             <img
               src={SearchIcon}
@@ -24,7 +24,7 @@ const BuyACarHero = () => {
               placeholder="Search by brand, model, colour, etc"
               name="HONDA"
               required
-              className="inline-flex py-2 font-Regular bg-[#FFFAF5] w-200px sm:w-[300px] text-xs"
+              className="inline-flex py-2 font-Regular bg-[#FFF] w-200px sm:w-[300px] text-xs"
             />
           </div>
           <div className="mr-4">

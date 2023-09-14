@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage/HomePage.jsx";
+import SellACarPage from "./pages/SellACarPage/SellACarPage.jsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import AboutPage from "./pages/AboutPage/AboutPage.jsx";
-import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import BuyACarPage from "./pages/BuyACarPage/BuyACarPage.jsx";
+import ContactUsPage from "./pages/ContactUsPage/ContactUsPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
@@ -11,8 +13,18 @@ const router = createBrowserRouter([
   { path: "/", element: <HomePage />, errorElement: <ErrorPage /> },
   { path: "/aboutus", element: <AboutPage />, errorElement: <ErrorPage /> },
   {
+    path: "/sellacar",
+    element: <SellACarPage />,
+    errorElement: <SellACarPage />,
+  },
+  {
+    path: "/buyacar",
+    element: <BuyACarPage />,
+    errorElement: <BuyACarPage />,
+  },
+  {
     path: "/contactus",
-    element: <ContactUs />,
+    element: <ContactUsPage />,
     errorElement: <ErrorPage />,
   },
 ]);
