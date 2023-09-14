@@ -31,39 +31,44 @@ function ListingsCard({
           </svg>
         </div>
       ) : (
-        <div style={{ height: 600 }}>
+        <div style={{ height: 600 }} className="">
           <a href={`/car-details/${uuid}`}>
             <img
-              className=" w-full px-2 py-2 img-fluid"
+              className="w-full h-[350px]"
               src={IMG}
               alt="Card Img"
               style={{
-                borderRadius: 15,
-                height: 350,
+                borderTopRightRadius: 15,
+                borderTopLeftRadius: 15,
+
                 backgroundSize: "center",
               }}
             />
           </a>
-          <a
-            href={`/car-details/${uuid}`}
-            className="inline-flex items-center py-1 px-6 ml-2 mt-2 text-lg font-Regular text-center text-white bg-purple-900 rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-purple-900 dark:hover:bg-purple-800 dark:focus:ring-purple-900"
-          >
-            {loading ? "loading..." : "GHS " + sellingPrice}
-          </a>
-          <div className="p-5">
-            <a href="/">
-              <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 ">
-                {loading ? "loading..." : title}
-              </h5>
-            </a>
-            <p className="mb-2 font-normal font-Regular text-gray-700 ">
-              {loading ? "loading..." : description}
-            </p>
 
-            <div
-              className={`inline-flex mb-3 text-sm text-gray-700 font-Regular`}
-            >
-              {loading ? "loading..." : iconText}
+          <div className="bg-white pb-4 shadow shadow-slate-200 rounded-b-xl">
+            <div className="p-5 bg-white -mt-2">
+              <a href="/">
+                <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 ">
+                  {loading ? "loading..." : title}
+                </h5>
+              </a>
+
+              <div
+                className={`inline-flex mb-3 text-sm text-gray-700 font-Regular`}
+              >
+                {loading ? "loading..." : iconText}
+              </div>
+            </div>
+            <div>
+              <a
+                href={`/car-details/${uuid}`}
+                className="inline-flex font-SemiBold tracking-tighter items-center py-1 px-6 text-xl hover:underline text-center text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-purple-900 dark:hover:bg-purple-800 dark:focus:ring-purple-900"
+              >
+                {loading
+                  ? "loading..."
+                  : "GHS " + Number(sellingPrice).toLocaleString("en-US")}
+              </a>
             </div>
           </div>
         </div>

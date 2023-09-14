@@ -87,7 +87,7 @@ const WhatSetBargainMotoApart = () => {
       </div>
       <button
         className="font-SemiBold bg-[#F3B757] text-center text-xl text-[#5C2E14] rounded-lg p-3 w-60 mt-6 
-        hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100"
       >
         Create an Account
       </button>

@@ -21,7 +21,6 @@ function HomePage() {
     async function fetchVehicles() {
       setLoading(true);
       const vehiclesData = await getVehicles();
-      console.log(vehiclesData);
       const cars = [BenzOne, BenzTwo, BenzThree];
       if (vehiclesData.length >= 1) {
         vehiclesData.map((item, i) => (item["icon"] = cars[i]));

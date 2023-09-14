@@ -8,8 +8,8 @@ const SellACarPage = () => {
   return (
     <div>
       <SellACarHeroSection />
-      <HomeCustomerVoices />
       <SellACarHowItWorks />
+      <HomeCustomerVoices />
       <CommonQuestions />
       <Footer />
     </div>

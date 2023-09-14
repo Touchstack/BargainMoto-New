@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import HowItWorksImg from "../../assets/images/howitworks.svg";
 import RegisterIcon from "../../assets/images/register-icon.svg";
@@ -63,18 +62,6 @@ const model_obj_sell = [
 ];
 
 export const SellACarHowItWorks = () => {
-  const [activeTab, setActiveTab] = React.useState("buy");
-  const [hideBuy, setHideBuy] = React.useState(null);
-  const [hideSell, setHideSell] = React.useState("hidden");
-  const activeBuyClass =
-    activeTab === "buy"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-gray-800 font-Bold border-amber-500 hover:border-b-4 hover:text-gray-900 focus:outline-none"
-      : "inline-block px-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100";
-  const activeSellClass =
-    activeTab === "sell"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-gray-800 font-Bold border-amber-500 hover:border-b-4 hover:text-gray-900 focus:outline-none border-appYellow"
-      : "inline-block px-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100";
-
   const tabContentVariant = {
     active: {
       display: "block",
@@ -105,52 +92,21 @@ export const SellACarHowItWorks = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="font-Bold flex justify-center items-center lg:text-4xl md:text-3xl sm:text-3xl text-4xl py-4">
+    <div className="container mx-auto pt-8 pb-16">
+      <div className="font-Bold flex justify-center items-center lg:text-4xl md:text-3xl sm:text-3xl text-4xl lg:py-18 md:py-16 sm:py-1 py-1">
         How it works
       </div>
       <div
-        className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 lg:py-8 py-4"
+        className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1"
         id="services"
       >
-        <div className="py-12 lg:pl-24 md:pl-16 sm:pl-12 pl-12 lg:pt-2">
+        <div className="pt-2 pb-16 lg:pl-48 md:pl-12 sm:pl-8 pl-8 lg:pt-2">
           <div id="myTabContent">
-            <motion.div
-              id="profile"
-              role="tabpanel"
-              variants={tabContentVariant}
-              animate={hideBuy ? "active" : "inactive"}
-              initial="inactive"
-              aria-labelledby="profile-tab"
-            >
-              <ol
-                className={`${hideSell} border-l border-gray-300 border-dashed`}
-              >
-                {model_obj_sell.map((e, i) => {
-                  return (
-                    <motion.li
-                      key={i}
-                      className="my-12 flex"
-                      variants={cardVariant}
-                    >
-                      <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white">
-                        {i + 1}
-                      </span>
-                      <div className="inline-flex justify-start items-center tracking-tighter font-Regular lg:text-xl md:text-lg sm:text-lg text-lg py-0">
-                        <img src={e.img} className="mr-2" />
-                        {e.title}
-                      </div>
-                    </motion.li>
-                  );
-                })}
-              </ol>
-            </motion.div>
-
             <motion.div
               id="dashboard"
               role="tabpanel"
               variants={tabContentVariant}
-              animate={hideSell ? "active" : "inactive"}
+              animate={"active"}
               initial="inactive"
               aria-labelledby="dashboard-tab"
             >
@@ -162,7 +118,7 @@ export const SellACarHowItWorks = () => {
                       className="my-12 flex"
                       variants={cardVariant}
                     >
-                      <div className="inline-flex justify-start items-center tracking-tighter font-Regular lg:text-xl md:text-lg sm:text-lg text- py-0">
+                      <div className="inline-flex justify-start items-center tracking-tighter font-Regular lg:text-2xl md:text-xl sm:text-xl text-xl py-0">
                         <img src={e.img} className="mr-2" />
                         {e.title}
                       </div>
@@ -174,7 +130,7 @@ export const SellACarHowItWorks = () => {
           </div>
           <PrimaryButton buttonText={"Sell Your Car Now"} className="" />
         </div>
-        <div className="flex justify-center items-center img-fluid ml-8 mr-8">
+        <div className="flex justify-center items-center lg:mx-0 lg:mr-32 md:mx-0 md:mr-16 sm:mx-8 mx-8">
           <img
             src={HowItWorksImg}
             alt="How It Works Img"

@@ -1,81 +1,142 @@
-import chevrondown from "../../assets/images/chevron-down.svg";
+import { useState } from "react";
+import FAQDocs from "./Docs";
 
 const CommonQuestions = () => {
+  const [accordionOpen, setAccordionOpen] = useState(null);
+  const buyerDocs = FAQDocs;
+  const activeHeader =
+    "font-SemiBold pl-4 text-xl accordion-header text-[#333333] tracking-tighter";
+
+  const FAQView = () => {
+    return buyerDocs.map((item) => {
+      return (
+        <div
+          key={item.headerId}
+          className="flex-col justify-center items-center"
+        >
+          <h2 id={item.headerId} className="accordion-header">
+            <button
+              type="button"
+              className={`${
+                accordionOpen === item.accordionTarget ? "bg-white" : "bg-white"
+              } flex justify-between items-center py-5 w-full text-lg text-left border-b border-gray-200 hover:bg-gray-200 focus:ring-gray-200 text-gray-900 accordion-header`}
+              data-accordion-target={`#${item.accordionTarget}`}
+              aria-expanded={
+                accordionOpen !== item.accordionTarget ? "false" : "true"
+              }
+              aria-controls={`${item.accordionTarget}`}
+              onClick={() => {
+                accordionOpen !== item.accordionTarget
+                  ? setAccordionOpen(item.accordionTarget)
+                  : setAccordionOpen();
+              }}
+            >
+              <span
+                className={
+                  accordionOpen === item.accordionTarget
+                    ? activeHeader
+                    : "font-Regular text-xl pl-4 text-[#333333] tracking-tighter"
+                }
+              >
+                {item.title}
+              </span>
+              <svg
+                data-accordion-icon=""
+                className={
+                  item.accordionTarget === accordionOpen ? "w-6 h-6" : "w-6 h-6"
+                }
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id={`${item.accordionTarget}`}
+            className={item.accordionTarget === accordionOpen ? null : "hidden"}
+            aria-labelledby={`${item.accordionTarget}`}
+          >
+            {item.content.isListTop ? (
+              <div className="py-5 border-b border-gray-200 accordion-header">
+                <ul className="mb-2 list-disc text-gray-500 text-justify">
+                  {item.content.lists.map((text) => {
+                    return (
+                      <li
+                        key={text}
+                        className="mb-2 font-Regular text-lg tracking-tighter"
+                      >
+                        {text}
+                      </li>
+                    );
+                  })}
+                </ul>
+                {item.content.paragraphs.map((text) => {
+                  return (
+                    <p
+                      key={text}
+                      className="mb-2 text-gray-500 text-justify font-Regular text-lg tracking-tighter"
+                    >
+                      {text}
+                    </p>
+                  );
+                })}
+              </div>
+            ) : item.content.isParagraghTop ? (
+              <div className="py-5 border-b border-gray-200 accordion-header">
+                {item.content.paragraphs.map((text) => {
+                  return (
+                    <p
+                      key={text}
+                      className="mb-2 text-gray-500 text-justify font-Regular text-lg tracking-tighter"
+                    >
+                      {text}
+                    </p>
+                  );
+                })}
+                <ul className="mb-2 list-disc text-gray-500 text-justify">
+                  {item.content.lists.map((text) => {
+                    return (
+                      <li
+                        key={text}
+                        className="mb-2 font-Regular text-lg tracking-tighter"
+                      >
+                        {text}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ) : (
+              <div className="py-5 border-b border-gray-200 accordion-header">
+                {item.content.paragraphs.map((text) => {
+                  return (
+                    <p key={text} className="mb-2 text-gray-500 text-justify">
+                      {text}
+                    </p>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    });
+  };
+
   return (
-    <div className="flex flex-col space-y-12 items-center">
-      <h3 className="container font-Bold text-[#191919] text-4xl text-bold m-10 text-center ">
+    <div>
+      <h3 className="font-Bold text-[#191919] text-4xl text-bold m-10 text-center pt-16">
         Common Questions
       </h3>
-      <div className="lg:w-9/12 md:w-9/12 sm:w-10/12 w-10/12 h-[88] flex flex-col justify-center items-center font-Regular text-2xl space-y-10">
-        <div className="text-[#333]">
-          Who do i need to be verified to use Bargain Moto?
-          <div className="inline-flex justify-end text-base text-[#000000]">
-            <div className="ml-80">
-              <img
-                src={chevrondown}
-                alt="chevron-down.svg"
-                style={{ height: "16px", width: "16px" }}
-                className="ml-2"
-              />
-            </div>
-          </div>
-          <h2 className="my-6 bg-[#D9D9D9] h-px sm:mx-auto lg:my-4" />
-        </div>
-        <div className="text-[#333]">
-          How does BargainMoto ensure the quality of cars listed?
-          <div className="inline-flex justify-end text-base text-[#000000]">
-            <div className="ml-44">
-              <img
-                src={chevrondown}
-                alt="chevron-down.svg"
-                style={{ height: "16px", width: "16px" }}
-                className="ml-16"
-              />
-            </div>
-          </div>
-          <h2 className="my-6 bg-[#D9D9D9] h-px sm:mx-auto lg:my-4" />
-        </div>
-        <div className="text-[#333]">
-          What fees does BargainMoto charge for its services?
-          <div className="inline-flex justify-end text-base text-[#000000]">
-            <div className="ml-56">
-              <img
-                src={chevrondown}
-                alt="chevron-down.svg"
-                style={{ height: "16px", width: "16px" }}
-                className="ml-20"
-              />
-            </div>
-          </div>
-          <h2 className="my-6 bg-[#D9D9D9] h-px sm:mx-auto lg:my-4" />
-        </div>
-        <div className="text-[#333] text-right">
-          What does BargainMoto protect my personal information?
-          <div className="inline-flex justify-end text-base text-[#000000]">
-            <div className="ml-56">
-              <img
-                src={chevrondown}
-                alt="chevron-down.svg"
-                style={{ height: "16px", width: "16px" }}
-                className=""
-              />
-            </div>
-          </div>
-          <h2 className="my-6 bg-[#D9D9D9] h-px sm:mx-auto lg:my-4" />
-        </div>
-        <div className="text-[#333]">
-          What should i do if i have a dispute with a buyer or seller?
-          <div className="inline-flex justify-end text-base text-[#000000]">
-            <div className="ml-60">
-              <img
-                src={chevrondown}
-                alt="chevron-down.svg"
-                style={{ height: "16px", width: "16px" }}
-                className=""
-              />
-            </div>
-          </div>
-          <h2 className="my-6 bg-[#D9D9D9] h-px sm:mx-auto lg:my-4" />
+      <div className="container mx-auto lg:w-6/12 md:w-8/12 sm:w-11/12 w-11/12 pb-32">
+        <div className="flex-col justify-center items-center">
+          <FAQView />
         </div>
       </div>
     </div>

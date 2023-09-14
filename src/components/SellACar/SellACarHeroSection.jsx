@@ -12,14 +12,14 @@ const SellACarHeroSection = () => {
       <div className="bg-[#8C394C]">
         <div className="py-18 px-2">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
               {/* Left Col */}
-              <div className="text-left items-center lg:p-32 md:p-24">
-                <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-[#FFF] text-4xl mt-6 break-normal md:break-all text-left">
+              <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
+                <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-[#FFF] text-4xl mt-6 text-left">
                   Sell Your Car Fast to Serious Buyers!
                 </h3>
-                <p className="font-Regular lg:text-lg md:text-lg sm:text-base pt-4 break-normal md:break-all text-[#EFEFEF] text-xl mt-10">
-                  Get the exposure you need to sell fast to the righ audience,
+                <p className="font-Regular lg:text-lg md:text-lg sm:text-base pt-8 text-[#EFEFEF] text-xl">
+                  Get the exposure you need to sell fast to the right audience,
                   at the best price possible!
                 </p>
                 <div className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-9 break-normal md:break-all">
@@ -32,31 +32,39 @@ const SellACarHeroSection = () => {
 
               {/* Right Col */}
 
-              <div className="relative inline-flex lg:mt-0 md:mt-0 mt-2 space-x-6">
-                <img
-                  src={Car1}
-                  alt="Car-1"
-                  style={{ height: "auto" }}
-                  className=""
-                />
-                <img
-                  src={Car2}
-                  alt="Car-2"
-                  style={{ height: "auto" }}
-                  className=""
-                />
-                <img
-                  src={Car3}
-                  alt="Car-3"
-                  style={{ height: "auto" }}
-                  className=""
-                />
-                <img
-                  src={Car4}
-                  alt="Car-4"
-                  style={{ height: "auto" }}
-                  className=""
-                />
+              <div className="grid grid-cols-3 gap-x-3 p-8">
+                <div className="flex justify-center items-center">
+                  <img
+                    src={Car1}
+                    alt="Car-1"
+                    style={{ height: "auto" }}
+                    className=""
+                  />
+                </div>
+                <div className="flex justify-center items-center">
+                  <span className="border border-[#FA9A00] border-dashed rounded-[25px]">
+                    <img
+                      src={Car2}
+                      alt="Car-2"
+                      style={{ height: "auto" }}
+                      className="p-2"
+                    />
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <img
+                    src={Car3}
+                    alt="Car-3"
+                    style={{ height: "auto" }}
+                    className="mb-4"
+                  />
+                  <img
+                    src={Car4}
+                    alt="Car-4"
+                    style={{ height: "auto" }}
+                    className=""
+                  />
+                </div>
               </div>
             </div>
           </div>
