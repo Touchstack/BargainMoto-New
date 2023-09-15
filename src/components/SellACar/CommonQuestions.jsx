@@ -134,7 +134,7 @@ const CommonQuestions = () => {
       <h3 className="font-Bold text-[#191919] text-4xl text-bold m-10 text-center pt-16">
         Common Questions
       </h3>
-      <div className="container mx-auto lg:w-6/12 md:w-8/12 sm:w-11/12 w-11/12 pb-32">
+      <div className="container mx-auto lg:w-10/12 md:w-10/12 sm:w-11/12 w-11/12 pb-32">
         <div className="flex-col justify-center items-center">
           <FAQView />
         </div>

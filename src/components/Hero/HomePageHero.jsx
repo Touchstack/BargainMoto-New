@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import OutlinedButton from "../Buttons/OutlinedButton";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,6 +7,7 @@ import PropTypes from "prop-types";
 
 const HomePageHero = ({ vehiclesData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,6 +49,7 @@ const HomePageHero = ({ vehiclesData }) => {
         <PrimaryButton
           buttonText={"Sell Your Car"}
           className={"lg:mb-0 md:mb-0 sm:mb-0 mb-4"}
+          onClick={() => navigate("/sellacar")}
         />
         <OutlinedButton
           buttonText={"Find your Dream Car"}

@@ -233,22 +233,40 @@ const Navbar = () => {
                 id="navbar-cta"
               >
                 <ul className="flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg  md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-                  <li className="list-none inline-block px-5 text-[#D5FFFF] hover:scale-105 duration-200 hover:font-SemiBold lg:ml-40 md:ml-0 sm:ml-0 ml-0">
+                  <li
+                    className={`list-none inline-block px-5 ${
+                      location.pathname === "/"
+                        ? "font-SemiBold text-[#F3B757]"
+                        : `text-[#FFF]`
+                    } hover:scale-105 duration-200 hover:font-SemiBold lg:ml-40 md:ml-0 sm:ml-0 ml-0`}
+                  >
                     <a href="/" className="">
                       Home
                     </a>
                   </li>
-                  <li className="list-none inline-block px-5 text-[#FBFBFB] hover:scale-105 duration-200 hover:font-SemiBold">
+                  <li
+                    className={`list-none inline-block px-5 ${
+                      location.pathname === "/sellacar"
+                        ? "font-SemiBold text-[#F3B757]"
+                        : `text-[#FFF]`
+                    } hover:scale-105 duration-200 hover:font-SemiBold`}
+                  >
                     <a href="/sellacar" className="">
                       Sell a Car
                     </a>
                   </li>
-                  <li className="list-none inline-block px-5 text-[#FBFBFB] hover:scale-105 duration-200 hover:font-SemiBold">
+                  <li
+                    className={`list-none inline-block px-5 ${
+                      location.pathname === "/buyacar"
+                        ? "font-SemiBold text-[#F3B757]"
+                        : `text-[#FFF]`
+                    } hover:scale-105 duration-200 hover:font-SemiBold`}
+                  >
                     <a href="/buyacar" className="">
                       Buy a Car
                     </a>
                   </li>
-                  <li className="list-none inline-block px-5 text-[#FFF]">
+                  <li className={`list-none inline-block px-5 text-[#FFF]`}>
                     <button
                       onClick={handleShowDropdown}
                       className="flex justify-center items-center mx-auto"
@@ -284,7 +302,7 @@ const Navbar = () => {
                 <ul className="flex items-center py-2 font-SemiBold text-lg">
                   <p className="p-2">
                     {" "}
-                    <li className="text-[#FFF] pr-5">Log In</li>{" "}
+                    <button className="text-[#FFF] pr-5">Log In</button>{" "}
                   </p>
                   <button className="bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg">
                     Sign Up
