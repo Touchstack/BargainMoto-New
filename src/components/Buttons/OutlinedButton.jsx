@@ -1,4 +1,6 @@
-export default function OutlinedButton({ className, buttonText }) {
+import PropTypes from "prop-types";
+
+function OutlinedButton({ className, buttonText }) {
   return (
     <button
       type="button"
@@ -9,3 +11,17 @@ export default function OutlinedButton({ className, buttonText }) {
     </button>
   );
 }
+
+OutlinedButton.propTypes = {
+  className: PropTypes.string,
+  buttonText: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+OutlinedButton.defaultProps = {
+  className: "",
+  buttonText: "",
+  onClick: () => {},
+};
+
+export default OutlinedButton;
