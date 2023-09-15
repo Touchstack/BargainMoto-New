@@ -15,7 +15,7 @@ const SellACarHeroSection = () => {
             <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
               {/* Left Col */}
               <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
-                <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-[#FFF] text-4xl mt-6 text-left">
+                <h3 className="font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
                   Sell Your Car Fast to Serious Buyers!
                 </h3>
                 <p className="font-Regular lg:text-lg md:text-lg sm:text-base pt-8 text-[#EFEFEF] text-xl">

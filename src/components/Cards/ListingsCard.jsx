@@ -1,21 +1,13 @@
 import PropTypes from "prop-types";
 
-function ListingsCard({
-  IMG,
-  uuid,
-  title,
-  description,
-  iconText,
-  loading,
-  sellingPrice,
-}) {
+function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
   return (
     <div className="max-w-sm lg:mt-0 md:mt-0 sm:mt-8 mt-8">
       {loading ? (
         <div className="text-center py-24 px-24">
           <svg
             role="status"
-            className="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            className="inline w-10 h-10 mr-2 text-gray-200 animate-spin"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +55,7 @@ function ListingsCard({
             <div>
               <a
                 href={`/car-details/${uuid}`}
-                className="inline-flex font-SemiBold tracking-tighter items-center py-1 px-6 text-xl hover:underline text-center text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-purple-900 dark:hover:bg-purple-800 dark:focus:ring-purple-900"
+                className="inline-flex font-SemiBold tracking-tighter items-center py-1 px-6 text-xl hover:underline text-center text-dark rounded-md focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 {loading
                   ? "loading..."

@@ -112,7 +112,7 @@ export default function Footer() {
                       placeholder="e.g derrik@hey.com"
                       name="subscriptionemail"
                       required
-                      className="block w-full p-4 text-[#666666] mb-4 font-Regular border border-[#DEDEDE] rounded-md bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="block w-full p-4 text-[#666666] mb-4 font-Regular border border-[#DEDEDE] rounded-md bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
                     />
 
                     {/*Netlify Form Handling*/}
@@ -121,7 +121,7 @@ export default function Footer() {
                     <button
                       type="submit"
                       className="font-SemiBold text-[#5C2E14] bg-[#F3B757]  hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-lg text-xl px-5 py-3 w-full
-                      text-center mr-3 md:mr-0 dark:bg-blue-600"
+                      text-center mr-3 md:mr-0"
                     >
                       Subscribe Now
                     </button>

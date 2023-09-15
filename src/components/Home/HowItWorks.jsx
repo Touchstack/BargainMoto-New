@@ -113,7 +113,7 @@ export const HowItWorks = () => {
           <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl py-4">
             How it works
           </h3>
-          <div className="mb-4 dark:border-gray-700">
+          <div className="mb-4">
             <ul
               className="flex flex-wrap justify-start py-4 font-medium font-Bold text-xl"
               id="myTab"
@@ -175,7 +175,7 @@ export const HowItWorks = () => {
                   return (
                     <motion.li
                       key={i}
-                      className="my-12 flex"
+                      className="my-12 flex w-11/12"
                       variants={cardVariant}
                     >
                       <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white">
@@ -206,7 +206,7 @@ export const HowItWorks = () => {
                   return (
                     <motion.li
                       key={i}
-                      className="my-12 flex"
+                      className="my-12 flex w-11/12"
                       variants={cardVariant}
                     >
                       <span className="font-Light flex items-center justify-center w-8 h-8 bg-white border border-gray-300 rounded-full -ml-4 mr-4 ring-8 ring-white">

@@ -1,4 +1,3 @@
-import React from "react";
 import Envelope from "../../assets/images/Envelope-fill.svg";
 import Phone from "../../assets/images/Phone-outgoing.svg";
 
@@ -9,7 +8,7 @@ const ContactGetInTouch = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-1 sm:grid-cols-1">
             {/* Left Col */}
-            <div className="text-left items-center lg:p-32 md:p-24">
+            <div className="text-left items-center md:p-24 sm:p-8 p-8">
               <header className="font-Bold text-[#000] lg:text-4xl md:text-3xl sm:text-3xl text-3xl break-normal md:break-all">
                 Get In Touch
               </header>
@@ -51,9 +50,7 @@ const ContactGetInTouch = () => {
                     placeholder="e.g Oheema Nketiah"
                     name="firstname"
                     required
-                    className="block w-full p-4 mt-2 text-[#666] font-Regular rounded-lg bg-[#F5F5F5] sm:text-md
-                    focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                      dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block w-full p-4 mt-2 text-[#666] font-Regular rounded-lg bg-[#F5F5F5] sm:text-md outline-none focus:outline-amber-300"
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
@@ -65,8 +62,7 @@ const ContactGetInTouch = () => {
                     name="email"
                     required
                     className="block w-full p-4 mt-2 text-[#666] font-Regular rounded-lg bg-[#F5F5F5] sm:text-md
-                     focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                      dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      outline-none focus:outline-amber-300"
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
@@ -77,9 +73,7 @@ const ContactGetInTouch = () => {
                     placeholder="Add your subject"
                     name="subjectline"
                     required
-                    className="block w-full p-4 mt-2 text-[#666] font-Regular rounded-lg bg-[#F5F5F5] sm:text-md focus:ring-blue-500
-                       focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                        dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block w-full p-4 mt-2 text-[#666] font-Regular rounded-lg bg-[#F5F5F5] sm:text-md outline-none focus:outline-amber-300"
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
@@ -89,9 +83,7 @@ const ContactGetInTouch = () => {
                     required
                     name="message"
                     rows="4"
-                    className="block p-1 mt-2 w-full text-[#666] font-Regular bg-[#F5F5F5] sm:text-md rounded-lg focus:ring-blue-500
-                     focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                      dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block p-1 mt-2 w-full text-[#666] font-Regular bg-[#F5F5F5] sm:text-md rounded-lg outline-none focus:outline-amber-300"
                     placeholder="start typing..."
                   ></textarea>
                 </div>
@@ -103,8 +95,7 @@ const ContactGetInTouch = () => {
                 <button
                   type="submit"
                   className="text-[#5C2E14] bg-[#F3B757] hover:bg-amber-500 focus:ring-1 focus:outline-none
-                   focus:ring-amber-100 font-medium font-SemiBold rounded-lg text-xl p-3 pl-12 pr-12 text-center dark:bg-blue-600
-                    dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                   focus:ring-amber-100 font-medium font-SemiBold rounded-lg text-xl p-3 pl-12 pr-12 text-center"
                 >
                   Send Message
                 </button>
