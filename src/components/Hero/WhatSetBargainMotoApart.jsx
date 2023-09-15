@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Yellow from "../../assets/images/yellow-model.svg";
 import Purple from "../../assets/images/purple-model.svg";
 import Green from "../../assets/images/green-model.svg";
@@ -12,72 +11,64 @@ const WhatSetBargainMotoApart = () => {
       </h3>
       <div className="py-4">
         <div className="my-3 container mx-auto text-center text-dark">
-          <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 grid-cols-1 mt-5 gap-2">
-            <div className="pl-12">
-              <div className="px-4">
-                <img
-                  src={Yellow}
-                  alt="yellow-model"
-                  style={{ height: "120px", width: "120px" }}
-                  className="img-fluid w-full"
-                />
-              </div>
-              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-lg text-xl mt-6 text-start">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:mt-5 md:mt-4 sm:mt-1 mt-1 gap-y-12 gap-x-4">
+            <div className="px-12">
+              <img
+                src={Yellow}
+                alt="yellow-model"
+                className="lg:h-[120px] lg:w-[120px] md:h-[100px] md:w-[100px] sm:h-[80px] sm:w-[80px] h-[80px] w-[80px]"
+              />
+
+              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 Identity Check
               </h3>
-              <p className="font-Regular text-[#333] text-xl pt-2 pb-4 mx-auto text-start mt-4">
+              <p className="font-Regular text-[#333] text-lg pt-2 pb-4 mx-auto text-start mt-4">
                 We verify buyers’ and sellers' identities before every sale.
               </p>
             </div>
-            <div className="pl-12">
-              <div className="px-4">
-                <img
-                  src={Purple}
-                  alt="purple-model"
-                  style={{ height: "120px", width: "120px" }}
-                  className="img-fluid w-full"
-                />
-              </div>
-              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-lg text-xl mt-6 text-start">
+            <div className="px-12">
+              <img
+                src={Purple}
+                alt="purple-model"
+                className="lg:h-[120px] lg:w-[120px] md:h-[100px] md:w-[100px] sm:h-[80px] sm:w-[80px] h-[80px] w-[80px]"
+              />
+
+              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 History Check
               </h3>
-              <p className="font-Regular text-[#333] text-xl pt-2 pb-4 mx-auto text-start mt-4">
+              <p className="font-Regular text-[#333] text-lg pt-2 pb-4 mx-auto text-start mt-4">
                 We confirm maintenance history so there are no costly surprises
                 after you buy.
               </p>
             </div>
 
-            <div className="pl-12">
-              <div className="px-4">
-                <img
-                  src={Green}
-                  alt="green-model"
-                  style={{ height: "120px", width: "120px" }}
-                  className="img-fluid w-full"
-                />
-              </div>
-              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-lg text-xl mt-6 text-start">
+            <div className="px-12">
+              <img
+                src={Green}
+                alt="green-model"
+                className="lg:h-[120px] lg:w-[120px] md:h-[100px] md:w-[100px] sm:h-[80px] sm:w-[80px] h-[80px] w-[80px]"
+              />
+
+              <h3 className="font-SemiBold text-[#191919] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 Secured Payments
               </h3>
-              <p className="font-Regular text-[#333] text-xl pt-2 pb-4 mx-auto text-start mt-4">
+              <p className="font-Regular text-[#333] text-lg pt-2 pb-4 mx-auto text-start mt-4">
                 Protect yourself from fraud through our secure online payment
                 platform. Anytime, Anywhere.
               </p>
             </div>
 
-            <div className="pl-12">
-              <div className="px-4">
-                <img
-                  src={VectorIcon}
-                  alt="Vector"
-                  style={{ height: "120px", width: "120px" }}
-                  className="img-fluid w-full"
-                />
-              </div>
-              <h3 className="font-SemiBold text-[#191919] text-start lg:text-2xl md:text-2xl sm:text-lg text-xl mt-6">
+            <div className="px-12">
+              <img
+                src={VectorIcon}
+                alt="Vector"
+                className="lg:h-[120px] lg:w-[120px] md:h-[100px] md:w-[100px] sm:h-[80px] sm:w-[80px] h-[80px] w-[80px]"
+              />
+
+              <h3 className="font-SemiBold text-[#191919] text-start lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6">
                 After Sales Services
               </h3>
-              <p className="font-Regular text-[#333] text-xl pt-2 pb-4 mx-auto text-start mt-4">
+              <p className="font-Regular text-[#333] text-lg pt-2 pb-4 mx-auto text-start mt-4">
                 Car registration, insurance, road side assitance and many more.
                 Our Journey with you doesnt end after your purchase.
               </p>

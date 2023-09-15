@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
 const ContactMapView = () => {
   return (
-    <div className="container mx-auto">
+    <div>
       <div
         className="rounded-lg"
         style={{

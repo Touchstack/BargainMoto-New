@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <div>
       <Navbar />
-      <HomePageHero />
+      <HomePageHero vehiclesData={vehicles} />
       <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HowItWorks />

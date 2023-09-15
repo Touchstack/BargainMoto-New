@@ -4,11 +4,9 @@ import PrimaryButton from "../../components/Buttons/PrimaryButton";
 export default function ErrorPage() {
   const error = useRouteError();
   return (
-    <div className="h-full max-h-screen">
-      <div className="shadow">
-        <Navbar />
-      </div>
-      <div className="flex flex-col justify-center items-center mt-24 pb-24 font-Regular h-full max-h-screen">
+    <div className="">
+      <Navbar />
+      <div className="flex flex-col justify-center items-center pt-24 pb-24 font-Regular">
         <h1 className="font-Bold text-6xl">Oops!</h1>
         <p className="text-xl text-slate-600 py-8 text-center">
           Sorry, an unexpected error has occurred.
