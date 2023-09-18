@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="">
       <footer className="p-4 sm:p-6 bg-[#0C0B0B] font-Regular">
         <div className="md:flex md:justify-center p-14">
-          <div className="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
             <div className="">
               <a href="/" className="flex justify-start items-start">
                 <img
@@ -21,34 +21,28 @@ export default function Footer() {
               </h2>
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
-                  <a
-                    href="https://portal.bargainmotogh.com/car-listings"
-                    className="hover:underline"
-                  >
+                  <a href="/sellacar" className="hover:underline">
                     Buy a car
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a
-                    href="https://portal.bargainmotogh.com/sellers"
-                    className="hover:underline"
-                  >
+                  <a href="/buyacar" className="hover:underline">
                     Sell a car
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/dealersguide" className="hover:underline">
+                  <a href="/aboutus" className="hover:underline">
                     About Us
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/contact" className="hover:underline">
+                  <a href="/contactus" className="hover:underline">
                     Contact Us
                   </a>
                 </li>
               </ul>
             </div>
-            <div>
+            {/*<div>
               <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
                 For Buyer
               </h2>
@@ -75,7 +69,7 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
+  </div>*/}
             <div>
               <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
                 Company
@@ -133,7 +127,7 @@ export default function Footer() {
         </div>
         <h2 className="my-6 p-0 bg-[#4D4949] w-1360 h-px sm:mx-auto lg:my-8" />
         <div className="flex sm:flex sm:items-center sm:justify-between justify-between">
-          <div className="flex lg:w-2/6 md:w-3/6 sm:w-auto w-auto justify-between">
+          <div className="flex lg:w-2/6 md:w-3/6 sm:w-auto w-auto justify-around">
             <div className="text-sm sm:text-center text-[#CACACA]">
               <a href="/termsofuse" className="hover:underline">
                 Privacy Policy

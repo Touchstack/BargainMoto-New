@@ -58,7 +58,7 @@ const HomePageHero = ({ vehiclesData }) => {
         />
       </div>
 
-      <motion.div className="flex justify-center items-center w-full overflow-auto">
+      {/*<motion.div className="flex justify-center items-center w-full overflow-auto">
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
@@ -80,7 +80,7 @@ const HomePageHero = ({ vehiclesData }) => {
             );
           })}
         </AnimatePresence>
-      </motion.div>
+      </motion.div>*/}
     </div>
   );
 };

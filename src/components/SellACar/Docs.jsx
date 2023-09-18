@@ -2,7 +2,7 @@ const FAQDocs = [
   {
     headerId: "accordion-flush-heading-1",
     accordionTarget: "accordion-flush-body-1",
-    title: "Why do i need to be verified to use Bargain Moto?",
+    title: "What is Bargain Moto?",
     content: {
       listInParagraph: false,
       paragraphs: [
@@ -19,7 +19,7 @@ const FAQDocs = [
   {
     headerId: "accordion-flush-heading-2",
     accordionTarget: "accordion-flush-body-2",
-    title: "How does BargainMoto ensure the quality of cars listed?",
+    title: "Why are Private Sales better?",
     content: {
       listInParagraph: false,
       paragraphs: [
@@ -37,7 +37,7 @@ const FAQDocs = [
   {
     headerId: "accordion-flush-heading-3",
     accordionTarget: "accordion-flush-body-3",
-    title: "What fees does BargainMoto charge for its services?",
+    title: "Why do I need to be Verified to use Bargain Moto?",
     content: {
       listInParagraph: false,
       paragraphs: [
@@ -51,7 +51,7 @@ const FAQDocs = [
   {
     headerId: "accordion-flush-heading-4",
     accordionTarget: "accordion-flush-body-4",
-    title: "What does BargainMoto protect my personal information?",
+    title: "How does Bargain Moto help me manage offers?",
     content: {
       listInParagraph: true,
       paragraphs: [
@@ -70,7 +70,8 @@ const FAQDocs = [
   {
     headerId: "accordion-flush-heading-9",
     accordionTarget: "accordion-flush-body-9",
-    title: "What should i do if i have a dispute with a buyer or seller?",
+    title:
+      "Why should the buyer of my car pay through Bargain Moto instead of paying me directly?",
     content: {
       listInParagraph: false,
       paragraphs: [

@@ -31,7 +31,8 @@ const SellACarHeroSection = () => {
                     buttonText={"Sell Your Car Now"}
                     className=""
                     onClick={() =>
-                      navigate("https://bargainmotogh.com/register")
+                      (window.location.href =
+                        "https://bargainmotogh.com/register")
                     }
                   />
                 </div>

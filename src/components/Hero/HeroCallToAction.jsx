@@ -15,10 +15,12 @@ const HeroCallToAction = () => {
         <PrimaryButton
           buttonText={"Sell Your Car"}
           className={"lg:mb-0 md:mb-0 sm:mb-0 mb-4"}
+          onClick={() => (window.location.href = "/sellacar")}
         />
         <OutlinedButton
           buttonText={"Find your Dream Car"}
           className={"lg:ml-5 md:ml-5 sm:ml-0 ml-4"}
+          onClick={() => (window.location.href = "/buyacar")}
         />
       </div>
     </div>

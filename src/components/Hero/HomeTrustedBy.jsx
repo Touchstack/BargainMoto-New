@@ -5,7 +5,7 @@ import Frimps from "../../assets/images/Frimps.svg";
 const HomeTrustedBy = () => {
   return (
     <div>
-      <div className="font-Regular flex justify-center items-center text-[#191919] mt-5">
+      <div className="font-Bold text-xl flex justify-center items-center text-[#191919] mt-5">
         Trusted by
       </div>
       <div className="font-Regular flex justify-center items-center lg:flex-row md:flex-row sm:flex-col m-5">

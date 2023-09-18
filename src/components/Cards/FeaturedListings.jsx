@@ -42,7 +42,7 @@ const FeaturedListings = ({ vehicleData, loading }) => {
             <div className="mt-12 lg:mb-12 md:mb-10 sm:mb-10 mb-10">
               <PrimaryButton
                 buttonText={"View more listings"}
-                onClick={() => navigate("/buyacar")}
+                onClick={() => (window.location.href = "/buyacar")}
               />
             </div>
           </Fragment>
