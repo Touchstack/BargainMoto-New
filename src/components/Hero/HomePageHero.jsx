@@ -54,6 +54,7 @@ const HomePageHero = ({ vehiclesData }) => {
         <OutlinedButton
           buttonText={"Find your Dream Car"}
           className={"lg:ml-5 md:ml-5 sm:ml-0"}
+          onClick={() => navigate("/buyacar")}
         />
       </div>
 
