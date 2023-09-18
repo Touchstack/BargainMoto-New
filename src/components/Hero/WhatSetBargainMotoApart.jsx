@@ -1,13 +1,18 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Yellow from "../../assets/images/yellow-model.svg";
 import Purple from "../../assets/images/purple-model.svg";
 import Green from "../../assets/images/green-model.svg";
 import VectorIcon from "../../assets/images/Vector.svg";
+
 const WhatSetBargainMotoApart = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#FAFAFA] text-center py-11 md:px-4">
       <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-4xl text-3xl pb-14">
-        What Sets
-        <p>BargainMoto Apart</p>
+        What Sets BargainMoto Apart
       </h3>
       <div className="py-4">
         <div className="my-3 container mx-auto text-center text-dark">
@@ -79,8 +84,11 @@ const WhatSetBargainMotoApart = () => {
       <button
         className="font-SemiBold bg-[#F3B757] text-center text-xl text-[#5C2E14] rounded-lg p-3 w-60 mt-6 
         hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100"
+        onClick={() =>
+          (window.location.href = "https://bargainmotogh.com/register")
+        }
       >
-        Create an Account
+        Create An Account
       </button>
     </div>
   );

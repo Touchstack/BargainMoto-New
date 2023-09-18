@@ -54,10 +54,11 @@ const HomePageHero = ({ vehiclesData }) => {
         <OutlinedButton
           buttonText={"Find your Dream Car"}
           className={"lg:ml-5 md:ml-5 sm:ml-0"}
+          onClick={() => navigate("/buyacar")}
         />
       </div>
 
-      <motion.div className="flex justify-center items-center w-full overflow-auto">
+      {/*<motion.div className="flex justify-center items-center w-full overflow-auto">
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
@@ -79,7 +80,7 @@ const HomePageHero = ({ vehiclesData }) => {
             );
           })}
         </AnimatePresence>
-      </motion.div>
+      </motion.div>*/}
     </div>
   );
 };

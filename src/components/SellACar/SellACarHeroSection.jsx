@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import Car1 from "../../assets/images/Car-1.svg";
@@ -6,6 +8,8 @@ import Car3 from "../../assets/images/Car-3.svg";
 import Car4 from "../../assets/images/Car-4.svg";
 
 const SellACarHeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -26,6 +30,10 @@ const SellACarHeroSection = () => {
                   <PrimaryButton
                     buttonText={"Sell Your Car Now"}
                     className=""
+                    onClick={() =>
+                      (window.location.href =
+                        "https://bargainmotogh.com/register")
+                    }
                   />
                 </div>
               </div>

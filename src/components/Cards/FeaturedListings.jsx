@@ -1,9 +1,13 @@
 import { Fragment } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import ListingsCard from "./ListingsCard";
 import PropTypes from "prop-types";
 
 const FeaturedListings = ({ vehicleData, loading }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
   return (
     <div className="bg-[#FBF8FC]">
       <div className="container mx-auto text-center lg:py-24 md:py-24 sm:py-12 py-12 md:px-4 px-11">
@@ -36,9 +40,10 @@ const FeaturedListings = ({ vehicleData, loading }) => {
               })}
             </div>
             <div className="mt-12 lg:mb-12 md:mb-10 sm:mb-10 mb-10">
-              <a href="/car-listings">
-                <PrimaryButton buttonText={"View more listings"} />
-              </a>
+              <PrimaryButton
+                buttonText={"View more listings"}
+                onClick={() => (window.location.href = "/buyacar")}
+              />
             </div>
           </Fragment>
         ) : (

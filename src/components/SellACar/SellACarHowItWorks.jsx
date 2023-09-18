@@ -128,7 +128,13 @@ export const SellACarHowItWorks = () => {
               </ol>
             </motion.div>
           </div>
-          <PrimaryButton buttonText={"Sell Your Car Now"} className="" />
+          <PrimaryButton
+            buttonText={"Sell Your Car Now"}
+            className=""
+            onClick={() =>
+              (window.location.href = "https://bargainmotogh.com/register")
+            }
+          />
         </div>
         <div className="flex justify-center items-center lg:mx-0 lg:mr-32 md:mx-0 md:mr-16 sm:mx-8 mx-8">
           <img
