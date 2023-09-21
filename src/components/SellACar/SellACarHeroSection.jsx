@@ -2,10 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import PrimaryButton from "../Buttons/PrimaryButton";
-import Car1 from "../../assets/images/Car-1.svg";
-import Car2 from "../../assets/images/Car-2.svg";
-import Car3 from "../../assets/images/Car-3.svg";
-import Car4 from "../../assets/images/Car-4.svg";
+import CarImage from "../../assets/images/sell-car.png";
 
 const SellACarHeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,40 +36,13 @@ const SellACarHeroSection = () => {
               </div>
 
               {/* Right Col */}
-
-              <div className="grid grid-cols-3 gap-x-3 p-8">
-                <div className="flex justify-center items-center">
-                  <img
-                    src={Car1}
-                    alt="Car-1"
-                    style={{ height: "auto" }}
-                    className=""
-                  />
-                </div>
-                <div className="flex justify-center items-center">
-                  <span className="border border-[#FA9A00] border-dashed rounded-[25px]">
-                    <img
-                      src={Car2}
-                      alt="Car-2"
-                      style={{ height: "auto" }}
-                      className="p-2"
-                    />
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center items-center">
-                  <img
-                    src={Car3}
-                    alt="Car-3"
-                    style={{ height: "auto" }}
-                    className="mb-4"
-                  />
-                  <img
-                    src={Car4}
-                    alt="Car-4"
-                    style={{ height: "auto" }}
-                    className=""
-                  />
-                </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src={CarImage}
+                  alt="sell-car.png"
+                  style={{ height: "auto" }}
+                  className=""
+                />
               </div>
             </div>
           </div>
