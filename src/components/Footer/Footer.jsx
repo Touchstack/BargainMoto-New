@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <div className="">
       <footer className="p-4 sm:p-6 bg-[#0C0B0B] font-Regular">
-        <div className="md:flex md:justify-center p-14">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
+        <div className="md:flex md:justify-center p-4">
+          <div className="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
             <div className="">
               <a href="/" className="flex justify-start items-start">
                 <img
@@ -32,17 +32,17 @@ export default function Footer() {
                 </li>
                 <li className="mb-2">
                   <a href="/aboutus" className="hover:underline">
-                    About Us
+                    Dealers Guide
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="/contactus" className="hover:underline">
-                    Contact Us
+                    FAQ
                   </a>
                 </li>
               </ul>
             </div>
-            {/*<div>
+            <div>
               <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
                 For Buyer
               </h2>
@@ -52,7 +52,7 @@ export default function Footer() {
                     href="https://portal.bargainmotogh.com/car-listings"
                     className="hover:underline"
                   >
-                    Toyota
+                    Browse listing
                   </a>
                 </li>
                 <li className="mb-2">
@@ -60,16 +60,16 @@ export default function Footer() {
                     href="https://portal.bargainmotogh.com/sellers"
                     className="hover:underline"
                   >
-                    Kia
+                    How it works
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="/contact" className="hover:underline">
-                    Mercedes
+                    FAQ
                   </a>
                 </li>
               </ul>
-  </div>*/}
+            </div>
             <div>
               <h2 className="mb-4 p-0 py-0 text-base font-Regular text-[#EC970F]">
                 Company
@@ -77,12 +77,12 @@ export default function Footer() {
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
                   <a href="/dealersguide" className="hover:underline">
-                    Dealers Guide
+                    About Us
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="/faqs" className="hover:underline">
-                    FAQ
+                    Contact Us
                   </a>
                 </li>
                 <li className="mb-2">
