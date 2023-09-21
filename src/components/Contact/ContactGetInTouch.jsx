@@ -12,12 +12,12 @@ const ContactGetInTouch = () => {
               <header className="font-Bold text-[#000] lg:text-4xl md:text-3xl sm:text-3xl text-3xl break-normal md:break-all">
                 Get In Touch
               </header>
-              <p className="font-Regular text-[#6D6D6D] lg:text-lg md:text-lg sm:text-base text-base pt-4 break-normal md:break-all">
+              <p className="font-Regular text-[#6D6D6D] lg:text-lg md:text-lg sm:text-base text-base pt-4">
                 We love to inform your vehicle purchase and sale decisions. Get
                 in touch today, we'll help you find the perfect vehicle with
                 utmost convenience.
               </p>
-              <p className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-16 break-normal md:break-all">
+              <p className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-16">
                 <img
                   src={Envelope}
                   alt="Envelope-fill"
@@ -26,14 +26,14 @@ const ContactGetInTouch = () => {
                 />
                 info@bargainmotogh.com
               </p>
-              <p className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-9 break-normal md:break-all">
+              <p className="font-Regular inline-flex text-[#6D6D6D] lg:text-xl md:text-lg sm:text-base text-base pt-9">
                 <img
                   src={Phone}
                   alt="Phone-outgoing"
                   style={{ height: "auto" }}
                   className="img-fluid mx-auto mr-6"
                 />
-                +233 243 589 7564
+                +233 53 428 3825
               </p>
             </div>
             {/* Right Col */}
