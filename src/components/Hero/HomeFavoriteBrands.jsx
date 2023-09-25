@@ -14,8 +14,8 @@ const HomeFavoriteBrands = () => {
         Favourite Brands
       </h3>
       <div className="font-Regular text-[#191919] text-md py-1">
-        Explore cars from your favorite brands. Find what you're
-        <p>looking for faster.</p>
+        Explore cars from your favorite brands. Find what you're looking for
+        faster.
       </div>
       <div className="py-16">
         <div className="container mx-auto text-center text-dark">
