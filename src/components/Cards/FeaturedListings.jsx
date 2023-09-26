@@ -22,7 +22,7 @@ const FeaturedListings = ({ vehicleData, loading }) => {
 
         {vehicleData.length >= 1 ? (
           <Fragment>
-            <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-4 text-left md:place-items-stretch place-items-center">
+            <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left">
               {vehicleData.map((e, i) => {
                 return (
                   <div key={i}>
