@@ -24,7 +24,7 @@ const BuyACarHero = () => {
               placeholder="Search by brand, model etc"
               name="HONDA"
               required
-              className="inline-flex py-2 font-Regular bg-[#FFF] w-200px sm:w-[300px] text-lg outline-none"
+              className="inline-flex py-2 font-Regular bg-[#FFF] w-200px sm:w-[300px] text-sm outline-none"
             />
           </div>
           <div className="-ml-10">

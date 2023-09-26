@@ -6,9 +6,6 @@ import HomeTrustedBy from "../../components/Hero/HomeTrustedBy";
 import WhatSetBargainMotoApart from "../../components/Hero/WhatSetBargainMotoApart";
 import HeroCallToAction from "../../components/Hero/HeroCallToAction";
 import HomeCustomerVoices from "../../components/Hero/HomeCustomerVoices";
-import BenzOne from "../../assets/images/benz-1.png";
-import BenzTwo from "../../assets/images/benz-2.png";
-import BenzThree from "../../assets/images/benz-3.png";
 import { HowItWorks } from "../../components/Home/HowItWorks";
 import { getVehicles } from "../../services/VehicleService";
 import FeaturedListings from "../../components/Cards/FeaturedListings";
@@ -16,16 +13,29 @@ import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   const [vehicles, setVehicles] = useState([]);
+  const [animatedVehicles, setAnimatedVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // Function to generate a unique identifier
+  function generateUniqueId() {
+    return Math.random().toString(36).substring(2) + Date.now().toString(36);
+  }
+
   useEffect(() => {
     async function fetchVehicles() {
       setLoading(true);
       const vehiclesData = await getVehicles();
-      const cars = [BenzOne, BenzTwo, BenzThree];
-      if (vehiclesData.length >= 1) {
-        vehiclesData.map((item, i) => (item["icon"] = cars[i]));
-        setVehicles(vehiclesData);
+      const newArray = [];
+      setVehicles(vehiclesData);
+      for (let i = 0; i < 100; i++) {
+        // Replicate objects in a circular manner
+        const objectItem = vehiclesData[i % vehiclesData.length];
+        // Add a unique identifier to the object
+        objectItem.animationId = generateUniqueId();
+        newArray.push(objectItem);
       }
+      console.log("new : =>", newArray);
+      setAnimatedVehicles(newArray);
       return setLoading(false);
     }
     fetchVehicles();
@@ -34,7 +44,7 @@ function HomePage() {
   return (
     <div>
       <Navbar />
-      <HomePageHero vehiclesData={vehicles} />
+      <HomePageHero vehiclesData={animatedVehicles} />
       <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HowItWorks />

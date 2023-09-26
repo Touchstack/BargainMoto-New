@@ -3,9 +3,9 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 
 const HeroCallToAction = () => {
   return (
-    <div className="bg-[#8C394C] text-center py-20">
+    <div className="bg-[#8C394C] text-center py-14">
       <div
-        className="font-Bold m-12 max-w-[9000px] text-[#FFFFFF]
+        className="font-Bold text-[#FFFFFF]
         lg:text-4xl md:text-3xl sm:text-3xl text-3xl text-center py-4"
       >
         Ready for a new ride or quick sale?

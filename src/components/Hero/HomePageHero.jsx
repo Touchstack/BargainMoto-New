@@ -15,7 +15,7 @@ const HomePageHero = ({ vehiclesData }) => {
     }, 1500); // Change image every 3 seconds
 
     return () => clearInterval(interval);
-  }, [vehiclesData]);
+  }, [vehiclesData?.length]);
 
   const cardVariant = {
     active: {
@@ -58,29 +58,36 @@ const HomePageHero = ({ vehiclesData }) => {
         />
       </div>
 
-      {/*<motion.div className="flex justify-center items-center w-full overflow-auto">
+      <motion.div className="flex justify-center items-center w-full overflow-auto">
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
               <motion.img
                 key={i}
-                initial={{ x: "100%" }}
-                animate={{ x: "0%" }}
-                exit={{ x: "-100%" }}
+                initial={{ x: "200%", opacity: 0 }}
+                animate={{ x: "0%", opacity: 1 }}
+                exit={{ x: "-200%" }}
                 transition={{
-                  ease: "linear",
-                  duration: 5,
-                  repeat: Infinity,
+                  x: {
+                    easings: "linear",
+                    repeatType: "mirror",
+                    repeatDelay: 0.15,
+                    duration: 7,
+                    repeat: Infinity,
+                  },
                 }}
-                className="h-[300px] w-[300px] rounded-3xl mr-5 hover:border border-orange-400 cursor-pointer"
+                className="h-[300px] w-[300px] rounded-3xl mr-5 hover:border hover:brightness-50 duration-500 border-orange-400 cursor-pointer"
                 alt={e.uuid}
                 src={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`}
                 variants={cardVariant}
+                onClick={() =>
+                  (window.location.href = `/car-details/${e?.uuid}`)
+                }
               />
             );
           })}
         </AnimatePresence>
-      </motion.div>*/}
+      </motion.div>
     </div>
   );
 };

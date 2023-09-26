@@ -23,31 +23,31 @@ function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
           </svg>
         </div>
       ) : (
-        <div style={{ height: 600 }} className="">
+        <div style={{ height: 400 }} className="w-full">
           <a href={`/car-details/${uuid}`}>
-            <img
-              className="w-full h-[350px]"
-              src={IMG}
-              alt="Card Img"
+            <div
+              className="h-[250px] hover:brightness-50 duration-500 -z-40"
               style={{
+                backgroundImage: `url(${IMG})`,
                 borderTopRightRadius: 15,
                 borderTopLeftRadius: 15,
-
-                backgroundSize: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "50%",
               }}
             />
           </a>
 
-          <div className="bg-white pb-4 shadow shadow-slate-200 rounded-b-xl">
+          <div className="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50">
             <div className="p-5 bg-white -mt-2">
-              <a href="/">
-                <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 ">
+              <a href={`/car-details/${uuid}`}>
+                <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 truncate hover:underline">
                   {loading ? "loading..." : title}
                 </h5>
               </a>
 
               <div
-                className={`inline-flex mb-3 text-sm text-gray-700 font-Regular`}
+                className={`inline-flex mb-3 text-sm text-gray-700 font-Regular truncate`}
               >
                 {loading ? "loading..." : iconText}
               </div>
