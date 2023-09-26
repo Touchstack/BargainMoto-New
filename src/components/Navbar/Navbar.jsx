@@ -132,10 +132,8 @@ const Navbar = () => {
             >
               {links.map(({ name, to, id }) => (
                 <span key={id}>
-                  <motion.a
+                  <a
                     href={to}
-                    whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
                     className={`flex justify-center items-center ${
                       showDropdown && name === "Company" ? "mb-1" : "mb-10"
                     } ${
@@ -160,7 +158,7 @@ const Navbar = () => {
                         />
                       </svg>
                     )}
-                  </motion.a>
+                  </a>
                   {showDropdown && name === "Company" ? (
                     <div className="">
                       <NavBarDropdown />
@@ -168,7 +166,7 @@ const Navbar = () => {
                   ) : null}
                 </span>
               ))}
-              <div className="absolute bottom-10 flex flex-col">
+              <div className="absolute bottom-20 flex flex-col">
                 <motion.a
                   href="/login"
                   className="font-Regular text-xl mb-10"

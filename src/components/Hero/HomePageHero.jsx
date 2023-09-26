@@ -58,7 +58,7 @@ const HomePageHero = ({ vehiclesData }) => {
         />
       </div>
 
-      {/*<motion.div className="flex justify-center items-center w-full overflow-auto">
+      <motion.div className="flex justify-center items-center w-full overflow-auto">
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
@@ -69,7 +69,9 @@ const HomePageHero = ({ vehiclesData }) => {
                 exit={{ x: "-100%" }}
                 transition={{
                   ease: "linear",
-                  duration: 5,
+                  //repeat: 1,
+                  repeatType: "loop",
+                  duration: 10,
                   repeat: Infinity,
                 }}
                 className="h-[300px] w-[300px] rounded-3xl mr-5 hover:border border-orange-400 cursor-pointer"
@@ -80,7 +82,7 @@ const HomePageHero = ({ vehiclesData }) => {
             );
           })}
         </AnimatePresence>
-      </motion.div>*/}
+      </motion.div>
     </div>
   );
 };
