@@ -58,7 +58,7 @@ const HomePageHero = ({ vehiclesData }) => {
         />
       </div>
 
-      <motion.div className="flex justify-center items-center w-full overflow-hidden">
+      <motion.div className="flex justify-center items-center w-full lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto">
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
