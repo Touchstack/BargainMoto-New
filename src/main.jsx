@@ -7,7 +7,10 @@ import AboutPage from "./pages/AboutPage/AboutPage.jsx";
 import BuyACarPage from "./pages/BuyACarPage/BuyACarPage.jsx";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage.jsx";
 import VehicleDetailsPage from "./pages/VehicleDetailsPage/VehicleDetailsPage.jsx";
+import TermsOfUse from "./pages/TermsOfUse/PrivacyPolicy.jsx";
+import PrivacyPolicy from "./pages/TermsOfUse/TermsOfUse.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -29,8 +32,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/car-details/:id",
+    path: "/vehicledetails",
     element: <VehicleDetailsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/termsofuse",
+    element: <TermsOfUse />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/privacypolicy",
+    element: <PrivacyPolicy />,
     errorElement: <ErrorPage />,
   },
 ]);
