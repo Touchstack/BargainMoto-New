@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import PrimaryButton from "../Buttons/PrimaryButton";
+import InfoTabs from "./InfoTabs";
 
 const VehicleDetails = ({ vehicleData, loading }) => {
   const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
@@ -35,7 +36,7 @@ const VehicleDetails = ({ vehicleData, loading }) => {
           <div className="mx-auto">
             <div className="flex lg:flex-row md:flex-col sm:flex-col flex-col">
               <div
-                className="md:h-[500px] h-[400px] lg:w-5/12 lg:mr-4 mb-4 cursor-pointer hover:brightness-50 duration-500"
+                className="bg-gray-200 md:h-[500px] h-[400px] lg:w-5/12 lg:mr-4 mb-4 cursor-pointer hover:brightness-50 duration-500"
                 style={{
                   backgroundImage: `url(${IMG})`,
                   backgroundRepeat: "no-repeat",
@@ -48,7 +49,7 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                   return (
                     <div
                       key={index}
-                      className={`md:h-[150px] h-[100px] cursor-pointer hover:brightness-50 duration-500 ${
+                      className={`bg-gray-200 md:h-[150px] h-[100px] cursor-pointer hover:brightness-50 duration-500 ${
                         index === splicedImages?.length - 1
                           ? "mb-0"
                           : "md:mb-6 sm:mb-4 mb-4"
@@ -102,6 +103,8 @@ const VehicleDetails = ({ vehicleData, loading }) => {
             No Available Featured Listings
           </p>
         )}
+
+        <InfoTabs />
       </div>
     </div>
   );
