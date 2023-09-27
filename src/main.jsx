@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import AboutPage from "./pages/AboutPage/AboutPage.jsx";
 import BuyACarPage from "./pages/BuyACarPage/BuyACarPage.jsx";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage.jsx";
+import VehicleDetailsPage from "./pages/VehicleDetailsPage/VehicleDetailsPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
   {
     path: "/contactus",
     element: <ContactUsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/car-details/:id",
+    element: <VehicleDetailsPage />,
     errorElement: <ErrorPage />,
   },
 ]);
