@@ -39,7 +39,7 @@ function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
           </a>
 
           <div className="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50">
-            <div className="p-5 bg-white -mt-2">
+            <div className="p-5 bg-white">
               <a href={`/car-details/${uuid}`}>
                 <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 truncate hover:underline">
                   {loading ? "loading..." : title}
