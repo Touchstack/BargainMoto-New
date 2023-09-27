@@ -36,7 +36,7 @@ const SellACarHeroSection = () => {
               </div>
 
               {/* Right Col */}
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center pb-5">
                 <img
                   src={CarImage}
                   alt="sell-car.png"

@@ -56,7 +56,7 @@ const HomePageHero = ({ vehiclesData }) => {
           duration: 10,
           repeat: 0,
         }}
-        className="grid grid-flow-col w-full lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto"
+        className="grid grid-flow-col-dense auto-cols-auto lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto"
       >
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
