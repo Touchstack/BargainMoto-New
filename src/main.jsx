@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/vehicledetails",
+    path: "/car-details/:id",
     element: <VehicleDetailsPage />,
     errorElement: <ErrorPage />,
   },
