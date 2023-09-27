@@ -64,17 +64,15 @@ const HomePageHero = ({ vehiclesData }) => {
             return (
               <motion.img
                 key={i}
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: "0%", opacity: 1 }}
-                exit={{ x: "-100%" }}
+                initial={{ x: "300%" }}
+                animate={{ x: "0%" }}
+                //exit={{ x: "-300%" }}
                 transition={{
-                  x: {
-                    easings: "linear",
-                    repeatType: "mirror",
-                    repeatDelay: 0.15,
-                    duration: 7,
-                    repeat: Infinity,
-                  },
+                  easings: "linear",
+                  //repeatType: "mirror",
+                  //repeatDelay: 0.15,
+                  duration: 15,
+                  repeat: Infinity,
                 }}
                 className="h-[300px] w-[300px] rounded-3xl mr-5 hover:border hover:brightness-50 duration-500 border-orange-400 cursor-pointer"
                 alt={e.uuid}
