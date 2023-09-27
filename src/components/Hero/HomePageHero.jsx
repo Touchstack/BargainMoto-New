@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import OutlinedButton from "../Buttons/OutlinedButton";
@@ -6,16 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 
 const HomePageHero = ({ vehiclesData }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % vehiclesData.length);
-    }, 1500); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [vehiclesData?.length]);
 
   const cardVariant = {
     active: {
@@ -58,25 +48,36 @@ const HomePageHero = ({ vehiclesData }) => {
         />
       </div>
 
-      <motion.div className="flex justify-center items-center w-full lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          easings: "linear",
+          duration: 10,
+          repeat: 0,
+        }}
+        className="grid grid-flow-col w-full lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto"
+      >
         <AnimatePresence>
           {vehiclesData.map((e, i) => {
             return (
-              <motion.img
+              <motion.div
                 key={i}
-                initial={{ x: "100%" }}
-                animate={{ x: "0%" }}
-                //exit={{ x: "-300%" }}
+                initial={{ x: "0%" }}
+                animate={{ x: "-400%" }}
                 transition={{
                   easings: "linear",
-                  //repeatType: "mirror",
-                  //repeatDelay: 0.15,
-                  duration: 15,
+                  repeatType: "reverse",
+                  duration: 10,
                   repeat: Infinity,
                 }}
-                className="h-[300px] w-[300px] rounded-3xl mr-5 hover:border hover:brightness-50 duration-500 border-orange-400 cursor-pointer"
-                alt={e.uuid}
-                src={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`}
+                className="md:h-[350px] md:w-[503px] h-[300px] w-[350px] rounded-3xl mr-5 hover:border hover:brightness-50 duration-500 border-orange-400 cursor-pointer"
+                style={{
+                  backgroundImage: `url(${`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "100%",
+                  backgroundPosition: "center",
+                }}
                 variants={cardVariant}
                 onClick={() =>
                   (window.location.href = `/car-details/${e?.uuid}`)
