@@ -64,7 +64,7 @@ const HomePageHero = ({ vehiclesData }) => {
             return (
               <motion.img
                 key={i}
-                initial={{ x: "300%" }}
+                initial={{ x: "100%" }}
                 animate={{ x: "0%" }}
                 //exit={{ x: "-300%" }}
                 transition={{
