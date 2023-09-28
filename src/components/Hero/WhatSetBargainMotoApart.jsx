@@ -83,7 +83,7 @@ const WhatSetBargainMotoApart = () => {
       </div>
       <button
         className="font-SemiBold bg-[#F3B757] text-center text-xl text-[#5C2E14] rounded-lg p-3 w-60 mt-6 
-        hover:bg-amber-500 focus:ring-1 focus:outline-none focus:ring-amber-100"
+        hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100"
         onClick={() =>
           (window.location.href = "https://bargainmotogh.com/register")
         }

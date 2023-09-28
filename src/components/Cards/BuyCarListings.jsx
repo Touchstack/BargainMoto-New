@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import Spinner from "../Spinner/Spinner";
 import ListingsCard from "./ListingsCard";
 import PropTypes from "prop-types";
 
@@ -11,7 +11,9 @@ const BuyCarListings = ({ vehicleData, loading }) => {
           Featured Listings
         </h3>
 
-        {vehicleData.length >= 1 ? (
+        {loading ? (
+          <Spinner />
+        ) : vehicleData.length >= 1 ? (
           <Fragment>
             <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-4 text-left">
               {vehicleData.map((e, i) => {
@@ -25,6 +27,7 @@ const BuyCarListings = ({ vehicleData, loading }) => {
                       title={e?.year + " " + e?.color + " " + e?.name}
                       description={e?.sale_type}
                       iconText={e?.location}
+                      saleType={e?.sale_type}
                     />
                   </div>
                 );
