@@ -165,7 +165,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/aboutus" className="hover:underline">
+                  <a href="/dealersguide" className="hover:underline">
                     Dealers Guide
                   </a>
                 </li>
