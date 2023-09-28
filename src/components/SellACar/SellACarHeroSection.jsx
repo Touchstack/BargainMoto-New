@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import CarImage from "../../assets/images/sell-car.png";
 
 const SellACarHeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
   return (
     <div>
       <Navbar />

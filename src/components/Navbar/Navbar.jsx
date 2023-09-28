@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import AppLogo from "../../assets/images/bargain-auto-logo.svg";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 const Navbar = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
   const hidden = "hidden"; //show or hide navbar
   const [ariaExpanded, setAriaExpanded] = useState("false"); //expanded or collapsed state
   const [showMenu, setShowMenu] = useState(true);
@@ -299,10 +302,24 @@ const Navbar = () => {
               >
                 <ul className="flex items-center py-2 font-SemiBold text-lg">
                   <p className="p-2">
-                    {" "}
-                    <button className="text-[#FFF] pr-5">Log In</button>{" "}
+                    <button
+                      className="text-[#FFF] pr-5"
+                      onClick={() =>
+                        (window.location.href =
+                          "https://bargainmotogh.com/register")
+                      }
+                    >
+                      Log In
+                    </button>
                   </p>
-                  <button className="bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg">
+                  <button
+                    className="bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg"
+                    buttonText={"Contact Us"}
+                    onClick={() =>
+                      (window.location.href =
+                        "https://bargainmotogh.com/register")
+                    }
+                  >
                     Sign Up
                   </button>
                 </ul>
