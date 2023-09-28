@@ -306,7 +306,7 @@ const Navbar = () => {
                       className="text-[#FFF] pr-5"
                       onClick={() =>
                         (window.location.href =
-                          "https://bargainmotogh.com/register")
+                          "https://bargainmotogh.com/login")
                       }
                     >
                       Log In
@@ -315,8 +315,7 @@ const Navbar = () => {
                   <button
                     className="bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg"
                     onClick={() =>
-                      (window.location.href =
-                        "https://bargainmotogh.com/register")
+                      (window.location.href = "https://bargainmotogh.com/login")
                     }
                   >
                     Sign Up
