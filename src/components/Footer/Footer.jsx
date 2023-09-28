@@ -21,12 +21,12 @@ export default function Footer() {
                   style={{ width: 88.727, height: 80.495 }}
                 />
               </a>
-              <div className="flex md:justify-between text-gray-600 dark:text-gray-400 pt-4 pr-8">
+              <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pr-8">
                 <a
                   href="https://web.facebook.com/Bargain-Motogh-105355808755769"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white"
+                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white mr-4"
                   onMouseOver={() => hoverOver("facebook")}
                   onMouseLeave={() => hoverOver()}
                 >
@@ -37,6 +37,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full"
                     >
                       <rect width="40" height="40" rx="8" fill="#F0AE43" />
                       <path
@@ -51,6 +52,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full border"
                     >
                       <rect width="40" height="40" rx="8" fill="black" />
                       <path
@@ -64,7 +66,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/bargainmoto/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white"
+                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white mr-4"
                   onMouseOver={() => hoverOver("linkedIn")}
                   onMouseLeave={() => hoverOver()}
                 >
@@ -75,6 +77,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full"
                     >
                       <rect width="40" height="40" rx="8" fill="#F0AE43" />
                       <path
@@ -91,6 +94,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full border"
                     >
                       <rect width="40" height="40" rx="8" fill="black" />
                       <path
@@ -106,7 +110,7 @@ export default function Footer() {
                   href="https://www.instagram.com/bargain_moto"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white"
+                  className="text-gray-400 hover:text-gray-500 dark:hover:text-white mr-4"
                   onMouseOver={() => hoverOver("instagram")}
                   onMouseLeave={() => hoverOver()}
                 >
@@ -117,6 +121,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full"
                     >
                       <rect width="40" height="40" rx="8" fill="#F0AE43" />
                       <path
@@ -131,6 +136,7 @@ export default function Footer() {
                       viewBox="0 0 40 40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="rounded-full border"
                     >
                       <rect width="40" height="40" rx="8" fill="black" />
                       <path
@@ -149,12 +155,12 @@ export default function Footer() {
               </h2>
               <ul className="text-[#CACACA]">
                 <li className="mb-2">
-                  <a href="/sellacar" className="hover:underline">
+                  <a href="/buyacar" className="hover:underline">
                     Buy a car
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/buyacar" className="hover:underline">
+                  <a href="/sellacar" className="hover:underline">
                     Sell a car
                   </a>
                 </li>

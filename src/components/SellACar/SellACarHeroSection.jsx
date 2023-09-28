@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import CarImage from "../../assets/images/sell-car.png";
 
 const SellACarHeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -36,15 +32,7 @@ const SellACarHeroSection = () => {
               </div>
 
               {/* Right Col */}
-<<<<<<< Updated upstream
               <div className="flex justify-center items-center pb-5">
-=======
-<<<<<<< HEAD
-              <div className="flex justify-center items-center mb-8">
-=======
-              <div className="flex justify-center items-center pb-5">
->>>>>>> d149691b5570fa65791ed3435e63d3a1136446b0
->>>>>>> Stashed changes
                 <img
                   src={CarImage}
                   alt="sell-car.png"
