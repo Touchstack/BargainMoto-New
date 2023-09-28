@@ -1,12 +1,121 @@
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import axios from "axios";
+import { motion } from "framer-motion";
 import AppLogo from "../../assets/images/bargain-auto-logo.svg";
+import Spinner from "../Spinner/Spinner";
 
 export default function Footer() {
   const [hoverIcon, setHoverIcon] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successAlert, setSuccessAlert] = useState(false);
+  const [successText, setSuccessText] = useState("");
+  const [errorAlert, setErrorAlert] = useState(false);
+  const [errorText, setErrorText] = useState("");
+  const [text, setText] = useState("");
 
   const hoverOver = (icon) => {
     return setHoverIcon(icon);
+  };
+
+  const handleChange = (e) => {
+    // 👇 Store the input value to local state
+    setText(e.target.value);
+  };
+
+  const subscribeNewsLetter = () => {
+    if (text.length === 0) {
+      setErrorText("Enter your email");
+      setErrorAlert(true);
+      return setTimeout(() => setErrorAlert(false), 2000);
+    }
+    setLoading(true);
+    var bodyFormData = new FormData();
+    bodyFormData.append("email", text);
+    axios({
+      method: "post",
+      url: "/api/newsletter",
+      data: bodyFormData,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+      .then((response) => {
+        // handle success
+        setSuccessText(response.data.message);
+        setSuccessAlert(true);
+        setLoading(false);
+        return setTimeout(() => setSuccessAlert(false), 3000);
+      })
+      .catch((error) => {
+        // handle error
+        setErrorText(
+          error?.response?.data?.message
+            ? error?.response?.data?.message
+            : error?.message
+        );
+        setErrorAlert(true);
+        setLoading(false);
+        return setTimeout(() => setErrorAlert(false), 2000);
+      });
+  };
+
+  const ErrorAlert = () => {
+    return (
+      <motion.div
+        id="alert-2"
+        className="flex p-4 mb-4 text-red-800 border border-red-300 rounded-lg bg-red-50"
+        role="alert"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <svg
+          aria-hidden="true"
+          className="flex-shrink-0 w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clipRule="evenodd"
+          />
+        </svg>
+
+        <span className="sr-only">Info</span>
+        <div className="ml-3 text-sm font-medium">{errorText}</div>
+      </motion.div>
+    );
+  };
+
+  const SuccessAlert = () => {
+    return (
+      <motion.div
+        id="alert-2"
+        className="flex p-4 mb-4 text-green-800 border border-green-300 rounded-lg bg-green-50"
+        role="alert"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span className="sr-only">Info</span>
+        <div className="ml-3 text-sm font-medium">{successText}</div>
+      </motion.div>
+    );
   };
 
   return (
@@ -240,6 +349,11 @@ export default function Footer() {
               <ul className="text-[#CACACA]">
                 <li>
                   <form name="subscribe" method="post">
+                    {loading ? null : errorAlert ? (
+                      <ErrorAlert />
+                    ) : successAlert ? (
+                      <SuccessAlert />
+                    ) : null}
                     <input
                       type="text"
                       id="large-input"
@@ -247,18 +361,22 @@ export default function Footer() {
                       name="subscriptionemail"
                       required
                       className="block w-full p-4 text-[#666666] mb-4 font-Regular border border-[#DEDEDE] rounded-md bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
+                      onChange={handleChange}
+                      value={text}
                     />
 
-                    {/*Netlify Form Handling*/}
-                    <input type="hidden" name="form-name" value="subscribe" />
-                    {/*Netlify Form Handling*/}
-                    <button
-                      type="submit"
-                      className="font-SemiBold text-[#5C2E14] bg-[#F3B757]  hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-lg text-xl px-5 py-3 w-full
+                    {loading ? (
+                      <Spinner />
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => subscribeNewsLetter()}
+                        className="font-SemiBold text-[#5C2E14] bg-[#F3B757]  hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-lg text-xl px-5 py-3 w-full
                       text-center mr-3 md:mr-0"
-                    >
-                      Subscribe Now
-                    </button>
+                      >
+                        Subscribe Now
+                      </button>
+                    )}
                   </form>
                 </li>
               </ul>
