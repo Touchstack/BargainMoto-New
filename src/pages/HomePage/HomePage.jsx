@@ -24,9 +24,10 @@ function HomePage() {
   useEffect(() => {
     async function fetchVehicles() {
       setLoading(true);
-      const vehiclesData = await getVehicles();
+      const response = await getVehicles();
+      const vehiclesData = response?.data;
       const newArray = [];
-      setVehicles(vehiclesData);
+      setVehicles(vehiclesData?.splice(0, 3));
       for (let i = 0; i < 100; i++) {
         // Replicate objects in a circular manner
         const objectItem = vehiclesData[i % vehiclesData.length];

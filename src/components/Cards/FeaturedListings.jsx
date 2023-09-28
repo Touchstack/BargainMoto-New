@@ -1,13 +1,10 @@
 import { Fragment } from "react";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import ListingsCard from "./ListingsCard";
+import Spinner from "../Spinner/Spinner";
 import PropTypes from "prop-types";
 
 const FeaturedListings = ({ vehicleData, loading }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
   return (
     <div className="bg-[#FBF8FC]">
       <div className="container mx-auto text-center lg:py-24 md:py-24 sm:py-12 py-12 md:px-4 px-11">
@@ -20,7 +17,9 @@ const FeaturedListings = ({ vehicleData, loading }) => {
           out some of the best deals we've got!
         </p>
 
-        {vehicleData.length >= 1 ? (
+        {loading ? (
+          <Spinner />
+        ) : vehicleData.length >= 1 ? (
           <Fragment>
             <div className="grid lg:grid-cols-3  md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-x-4 gap-y-12 text-left">
               {vehicleData.map((e, i) => {
@@ -34,6 +33,7 @@ const FeaturedListings = ({ vehicleData, loading }) => {
                       title={e?.year + " " + e?.color + " " + e?.name}
                       description={e?.sale_type}
                       iconText={e?.location}
+                      saleType={e?.sale_type}
                     />
                   </div>
                 );

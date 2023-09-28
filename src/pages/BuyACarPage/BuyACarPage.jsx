@@ -12,7 +12,8 @@ const BuyACarPage = () => {
   useEffect(() => {
     async function fetchVehicles() {
       setLoading(true);
-      const vehiclesData = await getVehicles();
+      const response = await getVehicles();
+      const vehiclesData = response?.data;
       const cars = [1, 2, 3, 4, 5];
       if (vehiclesData.length >= 1) {
         vehiclesData.map((item, i) => (item["icon"] = cars[i]));

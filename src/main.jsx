@@ -9,6 +9,7 @@ import ContactUsPage from "./pages/ContactUsPage/ContactUsPage.jsx";
 import VehicleDetailsPage from "./pages/VehicleDetailsPage/VehicleDetailsPage.jsx";
 import TermsOfUse from "./pages/TermsOfUse/PrivacyPolicy.jsx";
 import PrivacyPolicy from "./pages/TermsOfUse/TermsOfUse.jsx";
+import DealersGuide from "./pages/DealersGuide/DealerGuide.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
   {
     path: "/privacypolicy",
     element: <PrivacyPolicy />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/dealersguide",
+    element: <DealersGuide />,
     errorElement: <ErrorPage />,
   },
 ]);
