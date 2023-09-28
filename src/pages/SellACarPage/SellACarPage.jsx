@@ -10,7 +10,9 @@ const SellACarPage = () => {
       <SellACarHeroSection />
       <SellACarHowItWorks />
       <HomeCustomerVoices />
-      <CommonQuestions />
+      <section id="sellerfaqs">
+        <CommonQuestions />
+      </section>
       <Footer />
     </div>
   );

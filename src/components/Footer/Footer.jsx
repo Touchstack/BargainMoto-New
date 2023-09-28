@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import AppLogo from "../../assets/images/bargain-auto-logo.svg";
 
 export default function Footer() {
@@ -170,9 +171,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/sellacar" className="hover:underline">
+                  <HashLink
+                    to="/sellacar#sellerfaqs"
+                    className="hover:underline"
+                    smooth={true}
+                  >
                     FAQ
-                  </a>
+                  </HashLink>
                 </li>
               </ul>
             </div>
@@ -195,9 +200,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/sellacar" className="hover:underline">
+                  <HashLink
+                    to="/buyacar#buyerfaqs"
+                    className="hover:underline"
+                    smooth={true}
+                  >
                     FAQ
-                  </a>
+                  </HashLink>
                 </li>
               </ul>
             </div>

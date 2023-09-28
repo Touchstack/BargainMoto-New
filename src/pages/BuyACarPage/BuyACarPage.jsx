@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BuyACarHero from "../../components/BuyACar/BuyACarHero";
 import HomeCustomerVoices from "../../components/Hero/HomeCustomerVoices";
 import { getVehicles } from "../../services/VehicleService";
+import CommonQuestions from "../../components/BuyACar/CommonQuestions";
 import BuyCarListings from "../../components/Cards/BuyCarListings";
 
 import Footer from "../../components/Footer/Footer";
@@ -29,6 +30,9 @@ const BuyACarPage = () => {
       <BuyACarHero />
       <BuyCarListings vehicleData={vehicles} loading={loading} />
       <HomeCustomerVoices />
+      <section id="buyerfaqs">
+        <CommonQuestions />
+      </section>
       <Footer />
     </div>
   );
