@@ -4,8 +4,7 @@ import EllipseIcon from "../../assets/images/Ellipse.svg";
 import EllipseIcon2 from "../../assets/images/Amina.svg";
 const HomeCustomerVoices = () => {
   return (
-    <div className="bg-[#FFFDF6] lg:py-30 md:py-26 sm:py-20 py-14"> 
-    {/* <div className="bg-[#FFFDF6] lg:py-40 md:py-32 sm:py-28 py-16">  */}
+    <div className="bg-[#FFFDF6] lg:py-30 md:py-26 sm:py-20 py-14">
       <h3 className="font-Bold text-[#191919] text-center lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:py-3 md:py-8 py-4">
         Customer voices
       </h3>

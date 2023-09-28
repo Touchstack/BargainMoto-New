@@ -36,7 +36,15 @@ const SellACarHeroSection = () => {
               </div>
 
               {/* Right Col */}
+<<<<<<< Updated upstream
               <div className="flex justify-center items-center pb-5">
+=======
+<<<<<<< HEAD
+              <div className="flex justify-center items-center mb-8">
+=======
+              <div className="flex justify-center items-center pb-5">
+>>>>>>> d149691b5570fa65791ed3435e63d3a1136446b0
+>>>>>>> Stashed changes
                 <img
                   src={CarImage}
                   alt="sell-car.png"
