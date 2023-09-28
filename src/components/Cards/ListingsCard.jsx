@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 
-function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
+function ListingsCard({
+  IMG,
+  uuid,
+  title,
+  iconText,
+  loading,
+  sellingPrice,
+  saleType,
+}) {
   return (
     <div className="max-w-sm lg:mt-0 md:mt-0 sm:mt-8 mt-8">
       {loading ? (
@@ -26,7 +34,7 @@ function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
         <div style={{ height: 400 }} className="w-full">
           <a href={`/car-details/${uuid}`}>
             <div
-              className="h-[250px] hover:brightness-50 duration-500 -z-40"
+              className="h-[250px] hover:brightness-50 duration-500 -z-40 pt-4 pl-4"
               style={{
                 backgroundImage: `url(${IMG})`,
                 borderTopRightRadius: 15,
@@ -35,7 +43,13 @@ function ListingsCard({ IMG, uuid, title, iconText, loading, sellingPrice }) {
                 backgroundSize: "cover",
                 backgroundPosition: "50%",
               }}
-            />
+            >
+              {saleType && (
+                <div className="text-dark font-SemiBold md:text-base sm:text-base text-base bg-[#EC970F] md:w-5/12 sm:w-5/12 w-6/12 rounded-xl p-2 truncate">
+                  {saleType}
+                </div>
+              )}
+            </div>
           </a>
 
           <div className="bg-white pb-4 shadow-lg shadow-slate-200 rounded-b-xl h-[150px] z-50">
@@ -77,6 +91,7 @@ ListingsCard.propTypes = {
   iconText: PropTypes.string,
   loading: PropTypes.bool,
   sellingPrice: PropTypes.string,
+  saleType: PropTypes.string,
 };
 
 ListingsCard.defaultProps = {
@@ -87,6 +102,7 @@ ListingsCard.defaultProps = {
   iconText: "",
   loading: false,
   sellingPrice: "",
+  saleType: "",
 };
 
 export default ListingsCard;

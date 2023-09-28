@@ -314,7 +314,6 @@ const Navbar = () => {
                   </p>
                   <button
                     className="bg-[#FFF] text-[#8C394C] px-9 h-[50px] p-3 rounded-lg"
-                    buttonText={"Contact Us"}
                     onClick={() =>
                       (window.location.href =
                         "https://bargainmotogh.com/register")

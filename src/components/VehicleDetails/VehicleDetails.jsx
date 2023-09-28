@@ -48,7 +48,7 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                     backgroundPosition: "center",
                   }}
                 ></div>
-                <div className="flex-col justify-center items-center md:h-[600px] h-[350px] lg:w-3/12 lg:mr-4 mb-4">
+                <div className="flex-col justify-center items-center md:h-[600px] h-[350px] lg:w-3/12 lg:mr-6 mb-4">
                   {splicedImages?.map((item, index) => {
                     return (
                       <div
@@ -69,7 +69,7 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                   })}
                 </div>
                 <div className="flex justify-center md:h-[600px] h-[300px] lg:w-3/12">
-                  <div className="bg-white rounded-xl shadow-xl shadow-slate-200 p-5 text-black text-left self-center w-full">
+                  <div className="bg-white rounded-xl shadow-2xl shadow-slate-300 p-5 text-black text-left self-center w-full">
                     <div className="flex">
                       <h5 className=" text-[#EC970F] font-SemiBold text-base bg-[#FFF8EB] px-4 py-2 my-3 rounded-3xl self-start">
                         {vehicleData?.sale_type}
