@@ -160,8 +160,8 @@ const InfoTabs = ({ vehicleData }) => {
                   <span className="font-SemiBold">{vehicleData?.name}</span>
                 </span>
                 <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Model:{" "}
-                  <span className="font-SemiBold">{vehicleData?.model}</span>
+                  Color:{" "}
+                  <span className="font-SemiBold">{vehicleData?.color}</span>
                 </span>
                 <span className="font-Regular text-xl text-[#6D6D6D]">
                   Year:{" "}
@@ -181,10 +181,8 @@ const InfoTabs = ({ vehicleData }) => {
               {/*RIGHT COL*/}
               <div className="flex flex-col text-left">
                 <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Year of Registration:{" "}
-                  <span className="font-SemiBold">
-                    {vehicleData?.registration_year}
-                  </span>
+                  Location:{" "}
+                  <span className="font-SemiBold">{vehicleData?.location}</span>
                 </span>
                 <span className="font-Regular text-xl text-[#6D6D6D]">
                   Engine Capacity:{" "}
@@ -302,8 +300,7 @@ const InfoTabs = ({ vehicleData }) => {
                   buttonText={"Make an Offer"}
                   className={"self-center"}
                   onClick={() =>
-                    (window.location.href =
-                      "https://bargainmotogh.com/register")
+                    (window.location.href = `https://bargainmotogh.com/car-details/${vehicleData?.uuid}`)
                   }
                 />
               </div>

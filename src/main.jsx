@@ -10,6 +10,8 @@ import VehicleDetailsPage from "./pages/VehicleDetailsPage/VehicleDetailsPage.js
 import TermsOfUse from "./pages/TermsOfUse/PrivacyPolicy.jsx";
 import PrivacyPolicy from "./pages/TermsOfUse/TermsOfUse.jsx";
 import DealersGuide from "./pages/DealersGuide/DealerGuide.jsx";
+import SearchPage from "./pages/SearchPage/SearchPage.jsx";
+import { ContextProvider } from "./context/AppContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
@@ -52,10 +54,17 @@ const router = createBrowserRouter([
     element: <DealersGuide />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/vehicles/search/:text",
+    element: <SearchPage />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider>
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>
 );

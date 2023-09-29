@@ -14,7 +14,7 @@ const FeaturedListings = ({ vehicleData, loading }) => {
 
         <p className="font-Regular text-lg mx-auto mb-16 lg:w-4/6 md:w-5/6 w-6/6">
           Check out the top-notch cars available right now on BargainMoto. Check
-          out some of the best deals we've got!
+          out some of the best deals we&apos;ve got!
         </p>
 
         {loading ? (

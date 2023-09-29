@@ -94,10 +94,10 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                           )}
                     </div>
 
-                    <PrimaryButton
+                    {/*<PrimaryButton
                       buttonText={"Schedule Test Drive"}
                       className={"my-8 w-full"}
-                    />
+                          />*/}
                   </div>
                 </div>
               </div>
