@@ -334,11 +334,6 @@ export default function Footer() {
                     Contact Us
                   </a>
                 </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">
-                    Blogs
-                  </a>
-                </li>
               </ul>
             </div>
             <div>
