@@ -20,7 +20,7 @@ const VehicleDetailsPage = () => {
         setVehicle(vehiclesData);
         return setLoading(false);
       } catch (error) {
-        console.log("VEHICLE DETAILS ERROR: => ", error);
+        setLoading(false);
       }
     }
     fetchVehicleDetails();

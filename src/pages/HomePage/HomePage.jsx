@@ -35,7 +35,6 @@ function HomePage() {
         objectItem.animationId = generateUniqueId();
         newArray.push(objectItem);
       }
-      console.log("new : =>", newArray);
       setAnimatedVehicles(newArray);
       return setLoading(false);
     }

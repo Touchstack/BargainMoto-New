@@ -97,7 +97,6 @@ const BuyACarHero = () => {
               {loading ? <Spinner /> : "Search"}
             </button>
           </div>
-          <input type="hidden" name="form-name" value="subscribe" />
         </form>
       </div>
     </div>

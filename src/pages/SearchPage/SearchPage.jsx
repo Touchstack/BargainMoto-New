@@ -9,7 +9,7 @@ const SearchPage = () => {
   const [appContext] = useContext(AppContext);
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(appContext);
+
   useEffect(() => {
     async function fetchVehicles() {
       try {
@@ -18,7 +18,6 @@ const SearchPage = () => {
         setVehicles(response?.data);
         return setLoading(false);
       } catch (error) {
-        console.log(error);
         setLoading(false);
       }
     }
@@ -31,7 +30,11 @@ const SearchPage = () => {
       <SearchPageListings
         vehicleData={vehicles}
         loading={loading}
-        pageHeader={`Showing ${vehicles?.length} results for "${appContext?.searchText}"`}
+        pageHeader={
+          appContext?.searchText
+            ? `Showing ${vehicles?.length} results for "${appContext?.searchText}"`
+            : `Showing ${vehicles?.length} results`
+        }
       />
       <Footer />
     </div>

@@ -75,7 +75,6 @@ const ContactGetInTouch = () => {
       })
       .catch((error) => {
         // handle error
-        console.log("ERR", error);
         setErrorText(
           error?.response?.data?.message
             ? error?.response?.data?.message

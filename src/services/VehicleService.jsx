@@ -9,7 +9,7 @@ export const getVehicles = () =>
     })
     .catch(function (error) {
       // handle error
-      console.log(error);
+      return error;
     });
 
 export const getVehiclesById = (id) =>
@@ -21,7 +21,7 @@ export const getVehiclesById = (id) =>
     })
     .catch(function (error) {
       // handle error
-      console.log(error);
+      return error;
     });
 
 export const searchVehicles = (text) =>
@@ -33,5 +33,5 @@ export const searchVehicles = (text) =>
     })
     .catch(function (error) {
       // handle error
-      console.log(error);
+      return error;
     });
