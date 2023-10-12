@@ -12,7 +12,7 @@ const WhatSetBargainMotoApart = () => {
   return (
     <div className="bg-[#FAFAFA] text-center py-11 md:px-4">
       <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-4xl text-3xl pb-14">
-        What Sets BargainMoto Apart
+        What sets BargainMoto apart
       </h3>
       <div className="py-4">
         <div className="my-3 container mx-auto text-center text-dark">
