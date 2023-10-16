@@ -1,23 +1,5 @@
 const FAQDocs = [
   {
-    headerId: "accordion-flush-heading-2",
-    accordionTarget: "accordion-flush-body-2",
-    title: "Why are Private Sales better?",
-    content: {
-      listInParagraph: false,
-      paragraphs: [
-        // "Short answer: You make more money on the sale.",
-        // "Whether you’re selling the latest luxury vehicle or an old car, you’ll almost always earn more in private sales.",
-        // "Buying a used vehicle from a private party also has some benefits.",
-        // "Using a car dealership or middle-man will always incur substantial dealer fees  which will be added to the transaction cost, making the car more expensive. Plus, they can be difficult to negotiate with, compared to a private seller who may be more flexible on pricing or more friendly when discussing the details of the vehicle during test drives.",
-        // "Because a private seller is often the individual who drove the car frequently, he/she may know more about the vehicle’s condition and maintenance history than any dealer or middle-man.",
-      ],
-      lists: [],
-      isParagraghTop: true,
-      isListTop: false,
-    },
-  },
-  {
     headerId: "accordion-flush-heading-3",
     accordionTarget: "accordion-flush-body-3",
     title: "Why do I need to be Verified to use Bargain Moto?",
