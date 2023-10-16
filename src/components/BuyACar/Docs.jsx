@@ -48,24 +48,24 @@ const FAQDocs = [
       isListTop: true,
     },
   },
-  {
-    headerId: "accordion-flush-heading-6",
-    accordionTarget: "accordion-flush-body-6",
-    title: "What does it cost to use the Bargain Moto platform as a Buyer?",
-    content: {
-      listInParagraph: false,
-      paragraphs: [
-        "Buyers can enjoy the security and convenience of Bargain Moto by registering on our website for only Gh 50. If your bid is successful, we charge an administration fee of Gh 200. This fee partially covers the services we provide and the costs we pay for, including:",
-      ],
-      lists: [
-        "Insuring your transaction",
-        "Pre-purchase inspection (so you don't have to!)",
-        "Processing car ownership transfers",
-      ],
-      isParagraghTop: true,
-      isListTop: false,
-    },
-  },
+  // {
+  //   headerId: "accordion-flush-heading-6",
+  //   accordionTarget: "accordion-flush-body-6",
+  //   title: "What does it cost to use the Bargain Moto platform as a Buyer?",
+  //   content: {
+  //     listInParagraph: false,
+  //     paragraphs: [
+  //       "Buyers can enjoy the security and convenience of Bargain Moto by registering on our website for only Gh 50. If your bid is successful, we charge an administration fee of Gh 200. This fee partially covers the services we provide and the costs we pay for, including:",
+  //     ],
+  //     lists: [
+  //       "Insuring your transaction",
+  //       "Pre-purchase inspection (so you don't have to!)",
+  //       "Processing car ownership transfers",
+  //     ],
+  //     isParagraghTop: true,
+  //     isListTop: false,
+  //   },
+  // },
   {
     headerId: "accordion-flush-heading-7",
     accordionTarget: "accordion-flush-body-7",

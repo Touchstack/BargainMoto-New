@@ -6,11 +6,7 @@ import Toyota from "../../assets/images/Toyota-Logo.svg";
 import BMW from "../../assets/images/BMW-Logo.svg";
 const HomeFavoriteBrands = () => {
   return (
-    <div
-      className="container mx-auto text-[#191919] text-center
-       lg:py-18 md:py-18 sm:py-12 py-16 md:px-4 px-11
-     "
-    >
+    <div className="container mx-auto text-[#191919] text-center lg:py-18 md:py-18 sm:py-12 py-16 md:px-4 px-11">
       <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:py-3 md:py-8 py-4">
         Favourite Brands
       </h3>
@@ -20,7 +16,7 @@ const HomeFavoriteBrands = () => {
       </div>
       <div className="py-14">
         <div className="container mx-auto text-center text-dark">
-          <div className="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 grid-cols-1 mt-5">
+          <div className="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 grid-cols-1 mt-5 gap-9">
             <div>
               <img
                 src={Honda}

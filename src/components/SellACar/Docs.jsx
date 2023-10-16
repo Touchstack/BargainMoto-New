@@ -6,11 +6,11 @@ const FAQDocs = [
     content: {
       listInParagraph: false,
       paragraphs: [
-        "Short answer: You make more money on the sale.",
-        "Whether you’re selling the latest luxury vehicle or an old car, you’ll almost always earn more in private sales.",
-        "Buying a used vehicle from a private party also has some benefits.",
-        "Using a car dealership or middle-man will always incur substantial dealer fees  which will be added to the transaction cost, making the car more expensive. Plus, they can be difficult to negotiate with, compared to a private seller who may be more flexible on pricing or more friendly when discussing the details of the vehicle during test drives.",
-        "Because a private seller is often the individual who drove the car frequently, he/she may know more about the vehicle’s condition and maintenance history than any dealer or middle-man.",
+        // "Short answer: You make more money on the sale.",
+        // "Whether you’re selling the latest luxury vehicle or an old car, you’ll almost always earn more in private sales.",
+        // "Buying a used vehicle from a private party also has some benefits.",
+        // "Using a car dealership or middle-man will always incur substantial dealer fees  which will be added to the transaction cost, making the car more expensive. Plus, they can be difficult to negotiate with, compared to a private seller who may be more flexible on pricing or more friendly when discussing the details of the vehicle during test drives.",
+        // "Because a private seller is often the individual who drove the car frequently, he/she may know more about the vehicle’s condition and maintenance history than any dealer or middle-man.",
       ],
       lists: [],
       isParagraghTop: true,
@@ -25,6 +25,7 @@ const FAQDocs = [
       listInParagraph: false,
       paragraphs: [
         "Protecting buyers and sellers from fraud is a top priority of the Bargain Moto marketplace, and our verification process—making sure we all know who we're dealing with—is an important step in protecting our community.",
+        "When shopping online, a ‘Verified’ badge helps the buyer know that the identity of the person on the other end of the transaction is confirmed.",
       ],
       lists: [],
       isParagraghTop: true,
@@ -58,10 +59,9 @@ const FAQDocs = [
     content: {
       listInParagraph: false,
       paragraphs: [
-        "When a buyer pays through Bargain Moto, the payment is guaranteed. We ensure that the payment process is secure and, after the buyer picks up the car, we transfer the funds to your bank account on the same day or the next business day. You won't have to worry about handling large amounts of cash or verifying cheques.",
-        "The buyer may also want to pay through Bargain Moto so they can use our online methods of payment, financing, plus take advantage of our 3 month warranty.",
-        "It also makes it possible for us to handle the DVLA transfer of ownership process on your behalf, so you don't need to visit the DVLA.",
-        "Ultimately, you get the peace of mind of knowing that we'll get the transfer process completed without any stress on your part.",
+        "When a buyer pays through Bargain Moto, the payment is secured. We direct only committed buyers [buyers who have made a down payment] to you for an inspection or test drive. After the buyer confirms interest, we transfer the funds to your bank account on the same day or the next business day. You won't have to worry about handling large amounts of cash, verifying cheques, or multiple calls and unrewarding test drives.",
+        "A buyer paying through Bargain Moto can secure payment before inspecting your car, and drive away right after without the hassle of finding the right bank or long bank queues. Paying through Bargain Moto also gives them access to our aftersales services, where they can get up to ninety (90) days warranty.",
+        "Our aftersales services enhance the buying journey allowing buyers to register or change ownership, get insurance or even make some modifications to their new car all on one platform. We handle all these process, to make the whole experience convenient.",
       ],
       lists: [],
       isParagraghTop: true,
@@ -75,8 +75,8 @@ const FAQDocs = [
     content: {
       listInParagraph: false,
       paragraphs: [
-        "Sellers can choose to pay a listing fee of GH 50 per month or a one time listing fee of GH 75 which allows the vehicle to be on the platform until it sells or is removed by the seller.",
-        "When your car sells, we charge a flat sale fee of GH 1,400 which includes our facilitation and administration fees.",
+        "Sellers can choose to pay a listing fee of GH 45 per month or GH 80 for three (3) months.",
+        "When your car sells, we charge a flat sale fee of GH 1,400 which includes our facilitation and administration fees. This is deducted from the total payment the buyer makes.",
       ],
       lists: [],
       isParagraghTop: true,

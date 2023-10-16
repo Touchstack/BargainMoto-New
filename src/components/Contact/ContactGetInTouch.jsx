@@ -205,7 +205,7 @@ const ContactGetInTouch = () => {
               ) : null}
               <form name="contact" method="post">
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
-                  Your firstname
+                  Firstname
                   <input
                     type="text"
                     id="large-input"
@@ -218,7 +218,7 @@ const ContactGetInTouch = () => {
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
-                  Your lastname
+                  Lastname
                   <input
                     type="text"
                     id="large-input"
@@ -231,7 +231,7 @@ const ContactGetInTouch = () => {
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
-                  Your email
+                  E-mail
                   <input
                     type="text"
                     id="large-input"
