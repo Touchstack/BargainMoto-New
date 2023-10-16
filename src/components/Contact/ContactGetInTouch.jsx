@@ -258,7 +258,7 @@ const ContactGetInTouch = () => {
                   />
                 </div>
                 <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#0A0D14]">
-                  Your message
+                  Message
                   <textarea
                     id="message"
                     required
