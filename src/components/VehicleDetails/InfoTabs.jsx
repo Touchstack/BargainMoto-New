@@ -297,7 +297,11 @@ const InfoTabs = ({ vehicleData }) => {
 
               <div className="flex text-center lg:ml-4 md:m-0 sm:mx-auto mx-auto">
                 <PrimaryButton
-                  buttonText={"Make an Offer"}
+                  buttonText={
+                    vehicleData?.sale_type === "Fixed Price Sale"
+                      ? "Buy Now"
+                      : "Make an Offer"
+                  }
                   className={"self-center"}
                   onClick={() =>
                     (window.location.href = `https://bargainmotogh.com/car-details/${vehicleData?.uuid}`)
