@@ -45,8 +45,8 @@ function ListingsCard({
               }}
             >
               {saleType && (
-                <div className="text-dark font-SemiBold md:text-base sm:text-base text-base bg-[#EC970F] md:w-5/12 sm:w-5/12 w-6/12 rounded-xl p-2 truncate">
-                  {saleType}
+                <div className="text-dark font-SemiBold md:text-base sm:text-base text-base bg-[#EC970F] md:w-4/12 sm:w-4/12 w-5/12 rounded-xl p-2 truncate">
+                  {saleType === "Fixed Price Sale" ? "Fixed Price" : saleType}
                 </div>
               )}
             </div>
