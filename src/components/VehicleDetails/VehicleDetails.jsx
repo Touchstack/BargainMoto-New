@@ -1,13 +1,22 @@
 import PropTypes from "prop-types";
-import PrimaryButton from "../Buttons/PrimaryButton";
+import { useState } from "react";
+import ModalImage from "react-modal-image";
+import { Lightbox } from "react-modal-image";
 import Spinner from "../Spinner/Spinner";
 import InfoTabs from "./InfoTabs";
 
 const VehicleDetails = ({ vehicleData, loading }) => {
   const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
+  const [openModal, setOpenModal] = useState(false);
+  const [currentImg, setCurrentImg] = useState();
   const additionalImages = vehicleData?.pictures;
   const resultParsed = additionalImages && JSON.parse(additionalImages);
   const splicedImages = resultParsed?.slice(0, 3);
+
+  const openImage = (img) => {
+    setCurrentImg(img);
+    setOpenModal(true);
+  };
 
   return (
     <div className="bg-white">
@@ -32,6 +41,18 @@ const VehicleDetails = ({ vehicleData, loading }) => {
             <h3 className="tracking-tight text-left text-xl">Back to search</h3>
           </button>
 
+          {openModal && (
+            <Lightbox
+              small={currentImg}
+              large={currentImg}
+              medium={currentImg}
+              alt=""
+              hideZoom={true}
+              hideDownload={true}
+              onClose={() => setOpenModal(false)}
+            />
+          )}
+
           {loading ? (
             <div className="py-8">
               <Spinner />
@@ -40,6 +61,7 @@ const VehicleDetails = ({ vehicleData, loading }) => {
             <div className="mx-auto">
               <div className="flex lg:flex-row md:flex-col sm:flex-col flex-col">
                 <div
+                  onClick={() => openImage(IMG)}
                   className="bg-gray-100 md:h-[600px] h-[400px] lg:w-6/12 lg:mr-4 mb-4 cursor-pointer hover:brightness-50 duration-500"
                   style={{
                     backgroundImage: `url(${IMG})`,
@@ -58,6 +80,11 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                             ? "mb-0"
                             : "md:mb-8 sm:mb-4 mb-4"
                         }`}
+                        onClick={() =>
+                          openImage(
+                            `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`
+                          )
+                        }
                         style={{
                           backgroundImage: `url(${`https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`})`,
                           backgroundRepeat: "no-repeat",
@@ -72,7 +99,9 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                   <div className="bg-white rounded-xl shadow-2xl shadow-slate-300 p-5 text-black text-left self-center w-full">
                     <div className="flex">
                       <h5 className=" text-[#EC970F] font-SemiBold text-base bg-[#FFF8EB] px-4 py-2 my-3 rounded-3xl self-start">
-                        {vehicleData?.sale_type}
+                        {vehicleData?.sale_type === "Fixed Price Sale"
+                          ? "Fixed Price"
+                          : vehicleData?.sale_type}
                       </h5>
                     </div>
                     <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 truncate hover:underline">

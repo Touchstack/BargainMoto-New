@@ -1,11 +1,13 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-     "./index.html",
+    "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: { 
+    extend: {
       fontFamily: {
         Thin: ["Montserrat-Thin", "sans-serif"],
         ExtraLight: ["Montserrat-ExtraLight", "sans-serif"],
@@ -17,7 +19,5 @@ export default {
     },
   },
 
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
-
-

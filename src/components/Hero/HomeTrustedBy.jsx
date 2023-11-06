@@ -1,4 +1,5 @@
 import React from "react";
+import DominionInsurance from "../../assets/images/dominion.png";
 import Loyalty from "../../assets/images/Loyalty.svg";
 import Frimps from "../../assets/images/Frimps.svg";
 
@@ -19,6 +20,12 @@ const HomeTrustedBy = () => {
           src={Frimps}
           alt="Frimps.svg"
           style={{ height: "76px", width: "140px" }}
+          className="pl-6"
+        />
+        <img
+          src={DominionInsurance}
+          alt="Frimps.svg"
+          style={{ height: "70px", width: "150px" }}
           className="pl-6"
         />
       </div>

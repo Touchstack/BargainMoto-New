@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PrimaryButton from "../Buttons/PrimaryButton";
-import HollardImg from "../../assets/images/hollard.svg";
-import StarAssuranceImg from "../../assets/images/star-assurance.svg";
+// import HollardImg from "../../assets/images/hollard.svg";
+// import StarAssuranceImg from "../../assets/images/star-assurance.svg";
+import Engine from "../../assets/images/engine.svg";
+import GasPump from "../../assets/images/gas-pump.svg";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import BrandIcon from "../../assets/images/car_details.svg";
+import TransmissionIcon from "../../assets/images/transmission.svg";
+import GaugeIcon from "../../assets/images/gauge.svg";
+import CalendarIcon from "../../assets/images/calendar.svg";
 import { motion } from "framer-motion";
 
 const InfoTabs = ({ vehicleData }) => {
@@ -10,25 +17,26 @@ const InfoTabs = ({ vehicleData }) => {
   const [hideBuy, setHideBuy] = React.useState(null);
   const [hideSellerTab, setHideSellerTab] = React.useState(null);
   const [hideSell, setHideSell] = React.useState("show");
-  const [hideAddOn, setHideAddOn] = React.useState(null);
+  // const [hideAddOn, setHideAddOn] = React.useState(null);
   const activeBuyClass =
     activeTab === "buy"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-Bold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
+      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-SemiBold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
       : "inline-block px-4 rounded-t-lg border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100";
   const activeSellClass =
     activeTab === "sell"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-Bold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
+      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-SemiBold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
       : "inline-block px-4 rounded-t-lg border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100";
 
   const activeSellerTabClass =
     activeTab === "sellerTab"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-Bold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
+      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-SemiBold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none"
       : "inline-block px-4 rounded-t-lg border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100";
 
-  const activeAddOnClass =
+  /* const activeAddOnClass =
     activeTab === "addOnTab"
-      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-Bold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none truncate"
+      ? "inline-block px-4 rounded-t-lg border-b-4 text-[#EC970F] font-SemiBold border-amber-500 hover:border-b-4 hover:text-[#EC970F] focus:outline-none truncate"
       : "inline-block px-4 rounded-t-lg border-b-4 border-transparent hover:text-gray-600 hover:border-gray-300 text-gray-500 border-gray-100 truncate";
+*/
 
   const tabContentVariant = {
     active: {
@@ -46,7 +54,7 @@ const InfoTabs = ({ vehicleData }) => {
     <div className="my-12">
       <div className="mb-4">
         <ul
-          className="flex justify-center lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto my-4 font-medium font-Bold text-xl border-b border-gray-200"
+          className="flex justify-center lg:overflow-hidden md:overflow-hidden sm:overflow-auto overflow-auto my-4 font-medium font-Regular text-xl border-b border-gray-200"
           id="myTab"
           data-tabs-toggle="#myTabContent"
           role="tablist"
@@ -65,7 +73,7 @@ const InfoTabs = ({ vehicleData }) => {
                 setHideBuy(null);
                 setHideSell("show");
                 setHideSellerTab(null);
-                setHideAddOn(null);
+                // setHideAddOn(null);
               }}
             >
               Details
@@ -85,7 +93,7 @@ const InfoTabs = ({ vehicleData }) => {
                 setHideSell(null);
                 setHideBuy("show");
                 setHideSellerTab(null);
-                setHideAddOn(null);
+                //  setHideAddOn(null);
               }}
             >
               Description
@@ -105,13 +113,13 @@ const InfoTabs = ({ vehicleData }) => {
                 setHideSellerTab("show");
                 setHideBuy(null);
                 setHideSell(null);
-                setHideAddOn(null);
+                //  setHideAddOn(null);
               }}
             >
               Seller
             </button>
           </li>
-          <li className="mr-2" role="presentation">
+          {/* <li className="mr-2" role="presentation">
             <button
               className={activeAddOnClass}
               id="addOn"
@@ -122,15 +130,15 @@ const InfoTabs = ({ vehicleData }) => {
               aria-selected="false"
               onClick={() => {
                 setActiveTab("addOnTab");
-                setHideAddOn("show");
+                // setHideAddOn("show");
                 setHideBuy(null);
                 setHideSell(null);
-                setHideSellerTab(null);
+                // setHideSellerTab(null);
               }}
             >
               Add-on services
             </button>
-          </li>
+          </li>*/}
         </ul>
       </div>
 
@@ -152,52 +160,118 @@ const InfoTabs = ({ vehicleData }) => {
           </p>
 
           <div className="container mx-auto">
-            <div className="flex lg:flex-row md:flex-col sm:flex-col flex-col justify-around md:items-center sm:items-start items-start md:px-0 sm:px-8 px-8 py-8">
-              {/*LEFT COL*/}
-              <div className="flex flex-col text-left">
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Brand:{" "}
-                  <span className="font-SemiBold">{vehicleData?.name}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Color:{" "}
-                  <span className="font-SemiBold">{vehicleData?.color}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Year:{" "}
-                  <span className="font-SemiBold">{vehicleData?.year}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Vehicle&apos;s Mileage:{" "}
-                  <span className="font-SemiBold">{vehicleData?.mileage}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Transmission Type:{" "}
-                  <span className="font-SemiBold">
-                    {vehicleData?.transmission_type}
-                  </span>
-                </span>
+            <div className="flex flex-col justify-center items-center my-8">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8">
+                <div className="flex">
+                  <img src={BrandIcon} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.name}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Brand
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={TransmissionIcon} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.transmission_type}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Transmission
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={GaugeIcon} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.mileage}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Mileage
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={CalendarIcon} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-left text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.year}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Registration Year
+                    </p>
+                  </div>
+                </div>
               </div>
-              {/*RIGHT COL*/}
-              <div className="flex flex-col text-left">
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Location:{" "}
-                  <span className="font-SemiBold">{vehicleData?.location}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Engine Capacity:{" "}
-                  <span className="font-SemiBold">{vehicleData?.engine}</span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Fuel Type:{" "}
-                  <span className="font-SemiBold">
-                    {vehicleData?.fuel_type}
-                  </span>
-                </span>
-                <span className="font-Regular text-xl text-[#6D6D6D]">
-                  Vehicle Color:{" "}
-                  <span className="font-SemiBold">{vehicleData?.color}</span>
-                </span>
+            </div>
+
+            <div className="flex flex-col justify-center items-center my-8">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8">
+                <div className="flex">
+                  <HiOutlineLocationMarker
+                    size={30}
+                    className="text-[#A4A6A8] self-center"
+                  />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.location}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Location
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={GasPump} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.fuel_type}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Fuel
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={Engine} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.engine}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Engine
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex">
+                  <img src={BrandIcon} />
+                  <div className="flex-col justify-start items-start ml-4">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                      {vehicleData?.color}
+                    </p>
+                    <p className="font-Regular text-left text-[#6D6D6D]">
+                      {" "}
+                      Colour
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -312,7 +386,7 @@ const InfoTabs = ({ vehicleData }) => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/*<motion.div
           id="addOn"
           role="tabpanel"
           variants={tabContentVariant}
@@ -334,7 +408,7 @@ const InfoTabs = ({ vehicleData }) => {
             </p>
 
             <div className="flex lg:flex-row md:flex-row sm:flex-col flex-col justify-center md:items-center sm:items-center items-center md:px-0 sm:px-8 px-8 py-8">
-              {/*HOLLARD INSURANCE*/}
+             
               <div className="border-2 cursor-pointer hover:border-2 hover:border-[#F3B757] rounded-3xl lg:w-3/12 md:w-5/12 sm:w-10/12 w-10/12 ">
                 <div className="flex justify-start items-start p-5">
                   <img src={HollardImg} />
@@ -351,7 +425,6 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
               </div>
 
-              {/*STAR ASSURANCE*/}
               <div className="border-2 cursor-pointer hover:border-2 hover:border-[#F3B757] rounded-3xl lg:w-3/12 md:w-5/12 sm:w-10/12 w-10/12 lg:ml-4 md:ml-4 sm:mt-0 mt-4">
                 <div className="flex justify-start items-start p-5">
                   <img src={StarAssuranceImg} />
@@ -371,7 +444,7 @@ const InfoTabs = ({ vehicleData }) => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </div>
   );
