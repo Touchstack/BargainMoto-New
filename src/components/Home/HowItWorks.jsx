@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import HomeIcon from "../../assets/images/search-home.svg";
+import BargainSellers from "../../assets/images/bargain-sellers.svg";
+import CarSchedule from "../../assets/images/car-test-drive.svg";
+import FinalPayment from "../../assets/images/final-payment.svg";
 import HowItWorksImg from "../../assets/images/howitworks.svg";
 import RegisterIcon from "../../assets/images/register-icon.svg";
 import VehicleIcon from "../../assets/images/vehicle.svg";
@@ -36,25 +40,25 @@ const model_obj_buy = [
 
 const model_obj_sell = [
   {
-    img: RegisterIcon,
+    img: HomeIcon,
     color: "bg-purple-500",
     title: "Search & Create Account",
     text: "Find cars on our site and register to make offers.",
   },
   {
-    img: VehicleIcon,
+    img: BargainSellers,
     color: "bg-appYellow",
     title: "Bargain With Sellers",
     text: "Submit and keep track of your offers all in one place without sharing your personal contact information. You will receive direct feedback from the seller through the platform whether your bid has been accepted or rejected.",
   },
   {
-    img: TestDrive,
+    img: CarSchedule,
     color: "bg-green-400",
     title: "Schedule Test Drive",
     text: "Pay the minimum deposit and Schedule a date and time with the Seller for a test drive. Your deposit will be refunded if you reject the car after the test drive.",
   },
   {
-    img: MoneyImg,
+    img: FinalPayment,
     color: "bg-blue-500",
     title: "Final Payment",
     text: "Avoid fraud by using our escrow-like payment service. Simply send any remaining funds by using our Partner banks. Your money will be transferred to the seller after we have confirmation you have received the car with all the necessary documentation.",
