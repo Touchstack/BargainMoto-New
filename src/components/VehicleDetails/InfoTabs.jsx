@@ -216,7 +216,6 @@ const InfoTabs = ({ vehicleData }) => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex">
                   <HiOutlineLocationMarker
                     size={40}
@@ -272,6 +271,10 @@ const InfoTabs = ({ vehicleData }) => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="flex flex-col justify-center items-center my-8">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8"></div>
             </div>
           </div>
         </motion.div>
