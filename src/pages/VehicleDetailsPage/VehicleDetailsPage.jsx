@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 
 const VehicleDetailsPage = () => {
   const [vehicle, setVehicle] = useState();
+  const [similarVehicles, setSimilarVehicles] = useState();
   const [loading, setLoading] = useState(true);
   const loaction = useLocation();
   const pathSegments = loaction?.pathname.split("/");
@@ -17,7 +18,8 @@ const VehicleDetailsPage = () => {
       try {
         setLoading(true);
         const vehiclesData = await getVehiclesById(id);
-        setVehicle(vehiclesData);
+        setVehicle(vehiclesData[0]);
+        setSimilarVehicles(vehiclesData[1]?.data);
         return setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -29,7 +31,11 @@ const VehicleDetailsPage = () => {
   return (
     <div>
       <Navbar />
-      <VehicleDetails vehicleData={vehicle} loading={loading} />
+      <VehicleDetails
+        vehicleData={vehicle}
+        loading={loading}
+        similarVehiclesData={similarVehicles}
+      />
       <Footer />
     </div>
   );
