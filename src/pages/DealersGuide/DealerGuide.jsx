@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import { Docs } from "./Docs";
 import Footer from "../../components/Footer/Footer";

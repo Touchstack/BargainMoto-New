@@ -160,12 +160,12 @@ const InfoTabs = ({ vehicleData }) => {
           </p>
 
           <div className="container mx-auto">
-            <div className="flex flex-col justify-center items-center my-8">
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8">
+            <div className="flex flex-col md:justify-evenly justify-center md:items-stretch items-center my-16">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 px-12">
                 <div className="flex">
-                  <img src={BrandIcon} />
-                  <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                  <img src={BrandIcon} className="h-[30px] self-center" />
+                  <div className="flex-col justify-start items-start ml-4 w-10/12">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-left truncate">
                       {vehicleData?.name}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -176,9 +176,12 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={TransmissionIcon} />
+                  <img
+                    src={TransmissionIcon}
+                    className="h-[30px] self-center"
+                  />
                   <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-left">
                       {vehicleData?.transmission_type}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -189,7 +192,7 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={GaugeIcon} />
+                  <img src={GaugeIcon} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4">
                     <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
                       {vehicleData?.mileage}
@@ -202,7 +205,7 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={CalendarIcon} />
+                  <img src={CalendarIcon} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4">
                     <p className="font-SemiBold text-xl text-left text-[#6D6D6D] text-ellipsis">
                       {vehicleData?.year}
@@ -213,18 +216,14 @@ const InfoTabs = ({ vehicleData }) => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="flex flex-col justify-center items-center my-8">
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8">
                 <div className="flex">
                   <HiOutlineLocationMarker
-                    size={30}
+                    size={40}
                     className="text-[#A4A6A8] self-center"
                   />
-                  <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                  <div className="flex-col justify-start items-start ml-4 w-10/12">
+                    <p className="font-SemiBold text-xl text-left text-[#6D6D6D] truncate">
                       {vehicleData?.location}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -235,9 +234,9 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={GasPump} />
+                  <img src={GasPump} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                    <p className="font-SemiBold text-xl text-left text-[#6D6D6D] text-ellipsis">
                       {vehicleData?.fuel_type}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -248,9 +247,9 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={Engine} />
+                  <img src={Engine} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                    <p className="font-SemiBold text-xl text-left text-[#6D6D6D] text-ellipsis">
                       {vehicleData?.engine}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -261,9 +260,9 @@ const InfoTabs = ({ vehicleData }) => {
                 </div>
 
                 <div className="flex">
-                  <img src={BrandIcon} />
+                  <img src={BrandIcon} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4">
-                    <p className="font-SemiBold text-xl text-[#6D6D6D] text-ellipsis">
+                    <p className="font-SemiBold text-xl text-left text-[#6D6D6D] text-ellipsis">
                       {vehicleData?.color}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
@@ -325,7 +324,7 @@ const InfoTabs = ({ vehicleData }) => {
           <div className="container mx-auto px-12">
             <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-12 md:px-0 sm:px-8 px-8 py-8">
               <div className="flex flex-col justify-center items-end">
-                <p className="font-SemiBold text-2xl md:self-end sm:self-center self-center text-black">
+                <p className="font-Regular underline text-2xl md:self-end sm:self-center self-center text-black">
                   {vehicleData?.seller}
                 </p>
                 <p className="font-Light text-base text-black md:self-end sm:self-center self-center my-2">
@@ -370,7 +369,7 @@ const InfoTabs = ({ vehicleData }) => {
               </div>
 
               <div className="flex text-center lg:ml-4 md:m-0 sm:mx-auto mx-auto">
-                <PrimaryButton
+                {/*<PrimaryButton
                   buttonText={
                     vehicleData?.sale_type === "Fixed Price Sale"
                       ? "Buy Now"
@@ -380,7 +379,7 @@ const InfoTabs = ({ vehicleData }) => {
                   onClick={() =>
                     (window.location.href = `https://bargainmotogh.com/car-details/${vehicleData?.uuid}`)
                   }
-                />
+                />*/}
               </div>
             </div>
           </div>

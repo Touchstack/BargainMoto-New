@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import ModalImage from "react-modal-image";
 import { Lightbox } from "react-modal-image";
+import PrimaryButton from "../Buttons/PrimaryButton";
+import SimilarVehiclesListings from "../Cards/SimilarVehiclesListings";
 import Spinner from "../Spinner/Spinner";
 import InfoTabs from "./InfoTabs";
 
-const VehicleDetails = ({ vehicleData, loading }) => {
+const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
   const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
   const [openModal, setOpenModal] = useState(false);
   const [currentImg, setCurrentImg] = useState();
@@ -123,10 +124,17 @@ const VehicleDetails = ({ vehicleData, loading }) => {
                           )}
                     </div>
 
-                    {/*<PrimaryButton
-                      buttonText={"Schedule Test Drive"}
+                    <PrimaryButton
+                      buttonText={
+                        vehicleData?.sale_type === "Fixed Price Sale"
+                          ? "Buy Now"
+                          : "Make an Offer"
+                      }
+                      onClick={() =>
+                        (window.location.href = `https://bargainmotogh.com/car-details/${vehicleData?.uuid}`)
+                      }
                       className={"my-8 w-full"}
-                          />*/}
+                    />
                   </div>
                 </div>
               </div>
@@ -140,17 +148,23 @@ const VehicleDetails = ({ vehicleData, loading }) => {
 
         <InfoTabs vehicleData={vehicleData} />
       </div>
+      <SimilarVehiclesListings
+        loading={loading}
+        vehicleData={similarVehiclesData}
+      />
     </div>
   );
 };
 
 VehicleDetails.propTypes = {
   vehicleData: PropTypes.object,
+  similarVehiclesData: PropTypes.array,
   loading: PropTypes.bool,
 };
 
 VehicleDetails.defaultProps = {
-  vehicleData: {},
+  vehicleData: [],
+  similarVehiclesData: {},
   loading: "",
 };
 
