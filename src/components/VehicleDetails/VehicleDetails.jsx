@@ -1,23 +1,30 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Lightbox } from "react-modal-image";
 import PrimaryButton from "../Buttons/PrimaryButton";
 import SimilarVehiclesListings from "../Cards/SimilarVehiclesListings";
 import Spinner from "../Spinner/Spinner";
 import InfoTabs from "./InfoTabs";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import { Modal } from "flowbite-react";
 
 const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
   const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
   const [openModal, setOpenModal] = useState(false);
-  const [currentImg, setCurrentImg] = useState();
   const additionalImages = vehicleData?.pictures;
-  const resultParsed = additionalImages && JSON.parse(additionalImages);
+  const resultParsed = additionalImages ? JSON.parse(additionalImages): [];
   const splicedImages = resultParsed?.slice(0, 3);
 
-  const openImage = (img) => {
-    setCurrentImg(img);
+  const allImages = [
+    IMG,
+    ...splicedImages.map(item => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`)
+  ];
+
+  const openCarousel = () => {
     setOpenModal(true);
   };
+
+  
 
   return (
     <div className="bg-white">
@@ -42,17 +49,19 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
             <h3 className="tracking-tight text-left text-xl">Back to search</h3>
           </button>
 
-          {openModal && (
-            <Lightbox
-              small={currentImg}
-              large={currentImg}
-              medium={currentImg}
-              alt=""
-              hideZoom={true}
-              hideDownload={true}
-              onClose={() => setOpenModal(false)}
-            />
-          )}
+          <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
+            <Modal.Header>
+            {/* Optional Modal Title */}
+            </Modal.Header>
+            <Modal.Body>
+              <Slide>
+                {allImages.map((img, index) => (
+                  <img key={index} src={img} alt={`Slide ${index}`} className="w-full" />
+                ))}
+              </Slide>
+            </Modal.Body>
+         </Modal>
+
 
           {loading ? (
             <div className="py-8">
@@ -62,7 +71,7 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
             <div className="mx-auto">
               <div className="flex lg:flex-row md:flex-col sm:flex-col flex-col">
                 <div
-                  onClick={() => openImage(IMG)}
+                  onClick={() => openCarousel()}
                   className="bg-gray-100 md:h-[600px] h-[400px] lg:w-6/12 lg:mr-4 mb-4 cursor-pointer hover:brightness-50 duration-500"
                   style={{
                     backgroundImage: `url(${IMG})`,
@@ -82,7 +91,7 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
                             : "md:mb-8 sm:mb-4 mb-4"
                         }`}
                         onClick={() =>
-                          openImage(
+                          openCarousel(
                             `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`
                           )
                         }

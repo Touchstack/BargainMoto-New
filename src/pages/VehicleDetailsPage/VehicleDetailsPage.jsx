@@ -26,7 +26,7 @@ const VehicleDetailsPage = () => {
       }
     }
     fetchVehicleDetails();
-  }, []);
+  }, [id]);
 
   return (
     <div>
