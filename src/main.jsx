@@ -11,7 +11,7 @@ import TermsOfUse from "./pages/TermsOfUse/PrivacyPolicy.jsx";
 import PrivacyPolicy from "./pages/TermsOfUse/TermsOfUse.jsx";
 import DealersGuide from "./pages/DealersGuide/DealerGuide.jsx";
 import SearchPage from "./pages/SearchPage/SearchPage.jsx";
-import SellersProfilePage from "./pages/SellersProfilePage/SellersProfilePage.jsx";
+// import SellersProfilePage from "./pages/SellersProfilePage/SellersProfilePage.jsx";
 import { ContextProvider } from "./context/AppContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -60,11 +60,11 @@ const router = createBrowserRouter([
     element: <SearchPage />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/sellersprofile",
-    element: <SellersProfilePage />,
-    errorElement: <ErrorPage />,
-  },
+  // {
+  //   path: "/sellersprofile",
+  //   element: <SellersProfilePage />,
+  //   errorElement: <ErrorPage />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -328,9 +328,9 @@ const InfoTabs = ({ vehicleData }) => {
             <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-12 md:px-0 sm:px-8 px-8 py-8">
               <div className="flex flex-col justify-center items-end">
                 <p className="font-Regular underline text-2xl md:self-end sm:self-center self-center text-black">
-                  <a href="/sellersprofile" className="hover:underline">
-                    {vehicleData?.seller}
-                  </a>
+                  {/* <a href="/sellersprofile" className="hover:underline"> */}
+                  {vehicleData?.seller}
+                  {/* </a> */}
                 </p>
                 <p className="font-Light text-base text-black md:self-end sm:self-center self-center my-2">
                   Joined {vehicleData?.doj}
