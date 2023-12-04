@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import SellersHero from "./components/SellersHero";
 import VehicleListing from "./components/VehicleListing";
-import Reviews from "./components/Reviews";
+// import Reviews from "./components/Reviews";
 import Footer from "../../components/Footer/Footer";
 
 const SellersProfilePage = () => {
@@ -10,7 +10,7 @@ const SellersProfilePage = () => {
       <Navbar />
       <SellersHero />
       <VehicleListing />
-      <Reviews />
+      {/* <Reviews /> */}
       <Footer />
     </div>
   );
