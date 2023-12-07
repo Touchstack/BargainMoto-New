@@ -10,7 +10,7 @@ const AboutDescriptionSection = () => {
             Bargain Moto is an online marketplace for private car sales directly
             between buyers and sellers. Our platform is aimed at making the
             entire process around buying and selling your cars, faster and
-            easier.{" "}
+            easier.
           </p>
         </div>
       </div>
