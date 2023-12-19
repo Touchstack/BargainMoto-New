@@ -4,9 +4,8 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 import SimilarVehiclesListings from "../Cards/SimilarVehiclesListings";
 import Spinner from "../Spinner/Spinner";
 import InfoTabs from "./InfoTabs";
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
-import { Modal } from "flowbite-react";
+import Modal from "../Modal/Modal";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
   const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
@@ -14,17 +13,19 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
   const additionalImages = vehicleData?.pictures;
   const resultParsed = additionalImages ? JSON.parse(additionalImages): [];
   const splicedImages = resultParsed?.slice(0, 3);
+  
 
   const allImages = [
     IMG,
     ...splicedImages.map(item => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`)
   ];
 
+  console.log(allImages)
+
   const openCarousel = () => {
     setOpenModal(true);
   };
 
-  
 
   return (
     <div className="bg-white">
@@ -49,18 +50,9 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
             <h3 className="tracking-tight text-left text-xl">Back to search</h3>
           </button>
 
-          <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
-            <Modal.Header>
-            {/* Optional Modal Title */}
-            </Modal.Header>
-            <Modal.Body>
-              <Slide>
-                {allImages.map((img, index) => (
-                  <img key={index} src={img} alt={`Slide ${index}`} className="w-full" />
-                ))}
-              </Slide>
-            </Modal.Body>
-         </Modal>
+           <Modal show={openModal} onClose={() => setOpenModal(false)}>
+             <ImageCarousel images={allImages} />
+           </Modal>
 
 
           {loading ? (
