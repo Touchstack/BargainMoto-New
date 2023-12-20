@@ -9,14 +9,14 @@ const Modal = ({show, onClose, children}) => {
      
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-[60] flex "
+      className="fixed inset-0 bg-black bg-opacity-50 z-[60]"
       onClick={handleClose}
       style={{ width: '100vw' }}
     >
     <div className="flex justify-end p-5">
         <FaXmark className="text-white text-5xl cursor-pointer" onClick={() => onClose()} />
     </div>
-     <div className='flex flex-row items-center justify-center'>
+     <div className='flex items-center justify-center h-[70%]'>
       {children}
      </div>
     </div>

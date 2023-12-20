@@ -73,7 +73,7 @@ const HomePageHero = ({ vehiclesData }) => {
                 }}
                 className="md:h-[350px] md:w-[503px] h-[300px] w-[350px] rounded-3xl mr-5 hover:border hover:brightness-50 duration-500 border-orange-400 cursor-pointer"
                 style={{
-                  backgroundImage: `url(${`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`})`,
+                  backgroundImage: `url(${`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.cover_image}`})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "100%",
                   backgroundPosition: "center",

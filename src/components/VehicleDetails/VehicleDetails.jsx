@@ -8,19 +8,29 @@ import Modal from "../Modal/Modal";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
-  const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
+  const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.cover_image}`;
   const [openModal, setOpenModal] = useState(false);
-  const additionalImages = vehicleData?.pictures;
-  const resultParsed = additionalImages ? JSON.parse(additionalImages): [];
-  const splicedImages = resultParsed?.slice(0, 3);
+  const additionalImages = vehicleData
+    ? [     
+        vehicleData?.front_image,
+        vehicleData?.rear_image,
+        vehicleData?.side_image,
+        vehicleData?.dashboard_image,
+        vehicleData?.engine_image,
+      ]
+    : [];
+  
+  const resultParsed = JSON.stringify(additionalImages);
+  const splicedImages = resultParsed ? JSON.parse(resultParsed).slice(0, 3) : [];
+
+  
   
 
   const allImages = [
-    IMG,
-    ...splicedImages.map(item => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`)
+  
+   ...splicedImages.map(item => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`)
   ];
 
-  console.log(allImages)
 
   const openCarousel = () => {
     setOpenModal(true);
@@ -51,7 +61,9 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
           </button>
 
            <Modal show={openModal} onClose={() => setOpenModal(false)}>
-             <ImageCarousel images={allImages} />
+             <div className="flex flex-row items-center justify-center">
+               <ImageCarousel images={allImages} />
+             </div>
            </Modal>
 
 
@@ -101,15 +113,16 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
                   <div className="bg-white rounded-xl shadow-2xl shadow-slate-300 p-5 text-black text-left self-center w-full">
                     <div className="flex">
                       <h5 className=" text-[#EC970F] font-SemiBold text-base bg-[#FFF8EB] px-4 py-2 my-3 rounded-3xl self-start">
-                        {vehicleData?.sale_type === "Fixed Price Sale"
-                          ? "Fixed Price"
-                          : vehicleData?.sale_type}
+                        {vehicleData?.is_negotiable === "Yes"
+                          ? "Open To Bid"
+                          :  "Fixed"  //vehicleData?.sale_type
+                          } 
                       </h5>
                     </div>
                     <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 truncate hover:underline">
                       {loading
                         ? "loading..."
-                        : vehicleData?.year + " " + vehicleData?.name}
+                        : vehicleData?.year + " " + vehicleData?.brand}
                     </h5>
                     <div
                       className={`mb-3 text-sm text-gray-700 font-Regular truncate`}
@@ -120,14 +133,14 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
                       {loading
                         ? "loading..."
                         : "GHS " +
-                          Number(vehicleData?.selling_price).toLocaleString(
+                          Number(vehicleData?.price).toLocaleString(
                             "en-US"
                           )}
                     </div>
 
                     <PrimaryButton
                       buttonText={
-                        vehicleData?.sale_type === "Fixed Price Sale"
+                        vehicleData?.is_negotiable === "No"
                           ? "Buy Now"
                           : "Make an Offer"
                       }

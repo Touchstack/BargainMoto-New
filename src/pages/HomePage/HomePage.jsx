@@ -25,6 +25,7 @@ function HomePage() {
     async function fetchVehicles() {
       setLoading(true);
       const response = await getVehicles();
+      console.log(response);
       const vehiclesData = response?.data;
       const newArray = [];
       setVehicles(vehiclesData?.splice(0, 3));
