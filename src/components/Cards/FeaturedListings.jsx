@@ -27,10 +27,10 @@ const FeaturedListings = ({ vehicleData, loading }) => {
                   <div key={i}>
                     <ListingsCard
                       loading={loading}
-                      sellingPrice={e?.selling_price}
+                      sellingPrice={e?.price}
                       uuid={e.uuid}
-                      IMG={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`}
-                      title={e?.year + " " + e?.color + " " + e?.name}
+                      IMG={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.cover_image}`}
+                      title={e?.year + " " + e?.color + " " + e?.brand}
                       description={e?.sale_type}
                       iconText={e?.location}
                       saleType={e?.sale_type}

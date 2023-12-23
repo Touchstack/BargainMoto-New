@@ -13,6 +13,7 @@ const VehicleDetailsPage = () => {
   const pathSegments = loaction?.pathname.split("/");
   const id = pathSegments[pathSegments.length - 1];
 
+
   useEffect(() => {
     async function fetchVehicleDetails() {
       try {
