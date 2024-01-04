@@ -4,27 +4,32 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 import SimilarVehiclesListings from "../Cards/SimilarVehiclesListings";
 import Spinner from "../Spinner/Spinner";
 import InfoTabs from "./InfoTabs";
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import { Modal } from "flowbite-react";
 
 const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
-  const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.featured_image}`;
+  const IMG = `https://bargain-moto.nyc3.digitaloceanspaces.com/${vehicleData?.cover_image}`;
   const [openModal, setOpenModal] = useState(false);
+  const newImages = [
+    vehicleData?.front_image,
+    vehicleData?.rear_image,
+    vehicleData?.side_image,
+  ];
   const additionalImages = vehicleData?.pictures;
-  const resultParsed = additionalImages ? JSON.parse(additionalImages): [];
-  const splicedImages = resultParsed?.slice(0, 3);
+  const resultParsed = additionalImages ? JSON.parse(additionalImages) : [];
+  const splicedImages = newImages;
 
   const allImages = [
     IMG,
-    ...splicedImages.map(item => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`)
+    ...splicedImages.map(
+      (item) => `https://bargain-moto.nyc3.digitaloceanspaces.com/${item}`
+    ),
   ];
 
   const openCarousel = () => {
     setOpenModal(true);
   };
-
-  
 
   return (
     <div className="bg-white">
@@ -49,19 +54,25 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
             <h3 className="tracking-tight text-left text-xl">Back to search</h3>
           </button>
 
-          <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
-            <Modal.Header>
-            {/* Optional Modal Title */}
-            </Modal.Header>
+          <Modal
+            dismissible
+            show={openModal}
+            onClose={() => setOpenModal(false)}
+          >
+            <Modal.Header>{/* Optional Modal Title */}</Modal.Header>
             <Modal.Body>
               <Slide>
                 {allImages.map((img, index) => (
-                  <img key={index} src={img} alt={`Slide ${index}`} className="w-full" />
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Slide ${index}`}
+                    className="w-full"
+                  />
                 ))}
               </Slide>
             </Modal.Body>
-         </Modal>
-
+          </Modal>
 
           {loading ? (
             <div className="py-8">
@@ -109,15 +120,19 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
                   <div className="bg-white rounded-xl shadow-2xl shadow-slate-300 p-5 text-black text-left self-center w-full">
                     <div className="flex">
                       <h5 className=" text-[#EC970F] font-SemiBold text-base bg-[#FFF8EB] px-4 py-2 my-3 rounded-3xl self-start">
-                        {vehicleData?.sale_type === "Fixed Price Sale"
+                        {vehicleData.is_negotiable === "No"
                           ? "Fixed Price"
-                          : vehicleData?.sale_type}
+                          : "Open To Bid"}
                       </h5>
                     </div>
                     <h5 className="mb-1 text-xl font-Regular tracking-tight text-gray-700 truncate hover:underline">
                       {loading
                         ? "loading..."
-                        : vehicleData?.year + " " + vehicleData?.name}
+                        : vehicleData?.year +
+                          " " +
+                          vehicleData?.brand +
+                          " " +
+                          vehicleData?.model}
                     </h5>
                     <div
                       className={`mb-3 text-sm text-gray-700 font-Regular truncate`}
@@ -128,14 +143,12 @@ const VehicleDetails = ({ vehicleData, similarVehiclesData, loading }) => {
                       {loading
                         ? "loading..."
                         : "GHS " +
-                          Number(vehicleData?.selling_price).toLocaleString(
-                            "en-US"
-                          )}
+                          Number(vehicleData?.price).toLocaleString("en-US")}
                     </div>
 
                     <PrimaryButton
                       buttonText={
-                        vehicleData?.sale_type === "Fixed Price Sale"
+                        vehicleData.is_negotiable === "No"
                           ? "Buy Now"
                           : "Make an Offer"
                       }

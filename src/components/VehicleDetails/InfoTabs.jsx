@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PrimaryButton from "../Buttons/PrimaryButton";
 // import HollardImg from "../../assets/images/hollard.svg";
 // import StarAssuranceImg from "../../assets/images/star-assurance.svg";
 import Engine from "../../assets/images/engine.svg";
@@ -166,7 +165,7 @@ const InfoTabs = ({ vehicleData }) => {
                   <img src={BrandIcon} className="h-[30px] self-center" />
                   <div className="flex-col justify-start items-start ml-4 w-10/12">
                     <p className="font-SemiBold text-xl text-[#6D6D6D] text-left truncate">
-                      {vehicleData?.name}
+                      {vehicleData?.brand + " " + vehicleData?.model}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
                       {" "}
@@ -182,7 +181,7 @@ const InfoTabs = ({ vehicleData }) => {
                   />
                   <div className="flex-col justify-start items-start ml-4">
                     <p className="font-SemiBold text-xl text-[#6D6D6D] text-left">
-                      {vehicleData?.transmission_type}
+                      {vehicleData?.transmission}
                     </p>
                     <p className="font-Regular text-left text-[#6D6D6D]">
                       {" "}
@@ -376,7 +375,7 @@ const InfoTabs = ({ vehicleData }) => {
               <div className="flex text-center lg:ml-4 md:m-0 sm:mx-auto mx-auto">
                 {/*<PrimaryButton
                   buttonText={
-                    vehicleData?.sale_type === "Fixed Price Sale"
+                    vehicleData.is_negotiable === "Fixed Price Sale"
                       ? "Buy Now"
                       : "Make an Offer"
                   }

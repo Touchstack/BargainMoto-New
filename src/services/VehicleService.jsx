@@ -24,6 +24,18 @@ export const getVehiclesById = (id) =>
       return error;
     });
 
+export const getSellersVehicles = (id) =>
+  axios
+    .get(`https://bargainmotogh.com/api/${id}/vehicles`)
+    .then(function (response) {
+      // handle success
+      return response.data;
+    })
+    .catch(function (error) {
+      // handle error
+      return error;
+    });
+
 export const searchVehicles = (text) =>
   axios
     .get(`https://bargainmotogh.com/api/cars?search=${text}`)
