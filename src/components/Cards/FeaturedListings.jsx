@@ -5,6 +5,7 @@ import Spinner from "../Spinner/Spinner";
 import PropTypes from "prop-types";
 
 const FeaturedListings = ({ vehicleData, loading }) => {
+  console.log("VEHICLES:=>", vehicleData);
   return (
     <div className="bg-[#FBF8FC]">
       <div className="container mx-auto text-center lg:py-24 md:py-24 sm:py-12 py-12 md:px-4 px-11">
@@ -27,10 +28,18 @@ const FeaturedListings = ({ vehicleData, loading }) => {
                   <div key={i}>
                     <ListingsCard
                       loading={loading}
-                      sellingPrice={e?.selling_price}
+                      sellingPrice={e?.price}
                       uuid={e.uuid}
-                      IMG={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.featured_image}`}
-                      title={e?.year + " " + e?.color + " " + e?.name}
+                      IMG={`https://bargain-moto.nyc3.digitaloceanspaces.com/${e?.cover_image}`}
+                      title={
+                        e?.year +
+                        " " +
+                        e?.color +
+                        " " +
+                        e?.brand +
+                        " " +
+                        e?.model
+                      }
                       description={e?.sale_type}
                       iconText={e?.location}
                       saleType={e?.sale_type}

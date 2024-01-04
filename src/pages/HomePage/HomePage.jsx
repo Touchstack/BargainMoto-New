@@ -26,14 +26,16 @@ function HomePage() {
       setLoading(true);
       const response = await getVehicles();
       const vehiclesData = response?.data;
+      console.log(vehiclesData?.length);
       const newArray = [];
       setVehicles(vehiclesData?.splice(0, 3));
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
         // Replicate objects in a circular manner
-        const objectItem = vehiclesData[i % vehiclesData.length];
+        //  const objectItem = vehiclesData[i % vehiclesData.length];
         // Add a unique identifier to the object
-        objectItem.animationId = generateUniqueId();
-        newArray.push(objectItem);
+        //  objectItem.animationId = generateUniqueId();
+        //  newArray.push(objectItem);
       }
       setAnimatedVehicles(newArray);
       return setLoading(false);
@@ -44,7 +46,7 @@ function HomePage() {
   return (
     <div>
       <Navbar />
-      <HomePageHero vehiclesData={animatedVehicles} />
+      <HomePageHero vehiclesData={vehicles} />
       <HomeTrustedBy />
       <WhatSetBargainMotoApart />
       <HowItWorks />
